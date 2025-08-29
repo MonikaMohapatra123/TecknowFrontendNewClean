@@ -1,0 +1,133 @@
+.OfficeImageContain {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 50px;
+}
+
+.container__slider {
+  position: relative;
+  width: 100%;
+}
+
+.slider__item {
+  width: 100%;
+  text-align: center;
+  transition: opacity 0.5s ease-in-out; /* Smooth transition */
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Smooth transition */
+  transform: scale(0.95); /* Slightly scale down to add a subtle zoom effect */
+}
+
+.slider__item img {
+  width: 100%;
+  max-height: 700px;
+  border-radius: 15px;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.slider__item-active {
+  opacity: 1; /* Fully visible */
+  transform: scale(1); /* Return to original scale */
+}
+
+.container__slider__links {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.container__slider__links-small {
+  width: 60px;
+  height: 5px;
+  background-color: #ccc;
+  margin: 0 5px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease-in-out; /* Smooth transition on dot color change */
+}
+
+.container__slider__links-small-active {
+  background-color: var(--primary-color);
+}
+
+.slider__btn-next,
+.slider__btn-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #adadad;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease-in-out; /* Smooth transition on hover */
+}
+
+.slider__btn-Icon {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.slider__btn-Icon:hover{
+  color: var(--primary-color);
+}
+
+.slider__btn-next {
+  right: 10px;
+}
+
+.slider__btn-prev {
+  left: 10px;
+}
+
+.OfficeImageContain:hover .slider__btn-next,
+.OfficeImageContain:hover .slider__btn-prev {
+  opacity: 1; /* Show buttons on hover */
+}
+
+
+@media (max-width: 786px) {
+  .OfficeImageContain {
+    width: 100%; /* Make it full width */
+    padding: 20px; /* Reduce padding */
+  }
+
+  .slider__item img {
+    max-height: 500px; /* Reduce max height for smaller screens */
+    border-radius: 10px; /* Slightly smaller border radius */
+  }
+
+  .container__slider__links-small {
+    width: 40px; /* Smaller dot size */
+    height: 4px;
+  }
+
+  .slider__btn-next,
+  .slider__btn-prev {
+    width: 30px; /* Smaller button size */
+    height: 30px;
+  }
+
+  .slider__btn-Icon {
+    font-size: 16px; /* Slightly smaller icon */
+  }
+
+  .OfficeImageContain {
+    padding: 10px; /* Even smaller padding for very small screens */
+  }
+
+  .slider__item {
+    transform: scale(1); /* Remove the zoom effect on smaller screens */
+    transition: opacity 0.5s ease-in-out; /* Keep the transition */
+  }
+}
+

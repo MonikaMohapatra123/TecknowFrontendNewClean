@@ -1,0 +1,144 @@
+.ScrollEffect-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.parallax-section {
+  height: 400px; /* Adjust the height as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white; /* Text color */
+  font-family: Arial, sans-serif;
+  width: 100%; /* Adjusted width for better readability */
+  margin: 0 auto; /* Center horizontally */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better contrast */
+  padding: 10px; /* Add some padding for spacing */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+}
+
+.ScrollEffectFirst-card {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.ScrollEffectSecond-card {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.ScrollEffect-title {
+  font-size: 2.2rem;
+  font-weight: 400;
+  text-align: left;
+  padding: 20px;
+  margin-right: auto;
+}
+
+.ScrollEffect-title2 {
+  font-size: 2.2rem;
+  font-weight: 400;
+  text-align: right;
+  margin-left: auto;
+  padding: 20px;
+}
+
+.ScrollEffect-Para {
+  font-size: 1.25rem;
+  font-weight: 200;
+  text-align: left;
+  padding: 20px;
+  margin-right: auto;
+}
+
+.ScrollEffect-Para2 {
+  font-size: 1.25rem;
+  font-weight: 200;
+  text-align: right;
+  padding: 20px;
+  margin-left: auto;
+}
+
+.icon-arrowScroll {
+  margin-left: 5px; /* Add space between link text and icon */
+}
+
+.link-Scroll {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--white); /* Adjust color as needed */
+  font-size: 1rem; /* Adjust font size as needed */
+  padding: 20px;
+}
+
+.link-Scroll:hover {
+  color: var(--primary-color); 
+  transform: translateX(5px);
+}
+
+@media screen and (max-width: 1024px) {
+  .ScrollEffect-title, .ScrollEffect-title2 {
+    font-size: 1.75rem;
+  }
+
+  .ScrollEffect-Para, .ScrollEffect-Para2 {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .parallax-section {
+    height: 200px; /* Adjust the height as needed for smaller screens */
+    background-size: cover;
+  }
+
+  .ScrollEffect-title, .ScrollEffect-title2 {
+    font-size: 1.25rem;
+    text-align: center;
+    padding: 10px;
+    margin-right: 0;
+    margin-left: 0; /* Adjust margin to center the text */
+  }
+
+  .ScrollEffect-Para, .ScrollEffect-Para2 {
+    font-size: 0.8rem;
+    text-align: center;
+    margin-right: 0;
+    margin-left: 0; /* Adjust margin to center the text */
+  }
+
+  .link-Scroll {
+    padding: 10px;
+    display: block; /* Display links as blocks for better touch interaction */
+    text-align: center;
+  }
+
+  .link-Scroll:hover {
+    transform: none; /* Remove transform on hover */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .parallax-section {
+    height: 150px; /* Adjust the height as needed for smaller screens */
+  }
+
+  .ScrollEffect-title, .ScrollEffect-title2 {
+    font-size: 1rem;
+  }
+
+  .ScrollEffect-Para, .ScrollEffect-Para2 {
+    display: none;
+  }
+
+  .link-Scroll {
+    font-size: 0.875rem;
+    padding: 8px;
+  }
+}

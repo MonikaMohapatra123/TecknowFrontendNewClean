@@ -1,0 +1,100 @@
+/* Default styles */
+.Quotes-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .Quotes-border {
+    border-bottom: 4px solid var(--primary-color);
+    width: 1300; /* Full width */
+  }
+  
+  .Quotes-DetailsContainer {
+    width: 1200px; /* Full width */
+    display: flex;
+    align-items: left;
+    justify-content: space-around;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .Quotes-DetailsContainer .Quotes-Details {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 22px;
+    line-height: 40px;
+    margin: 0 10px;
+  }
+  
+  .Quote-Left,
+  .Quote-Right {
+    font-size: 24px;
+    color: var(--white-hover);
+  }
+  
+  .Quotes-ceoSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .Quotes-ImageCircle {
+
+    margin: 0 auto 10px auto; /* Centers the image horizontally and adds bottom margin */
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; /* Ensures the image is perfectly circular */
+  }
+  
+  .quotes-Image {
+    width: 100%; /* Ensures the image takes the full width of its container */
+    height: auto; /* Maintains the image's natural aspect ratio */
+    object-fit: contain; /* Ensures the entire image fits within the container */
+    border-radius: 50%;
+  }
+  
+  
+  .Quotes-Name {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .Quotes-Designation {
+    font-size: 14px;
+    color: var(--white-hover);
+    margin-bottom: 20px;
+  }
+
+
+  
+  
+  /* Mobile styles */
+  @media (max-width: 786px) {
+    .Quotes-DetailsContainer {
+      flex-direction: column;
+      align-items: center;
+      width: 100%; /* Full width */
+    }
+
+    .Quotes-border {
+        width: 100%;
+    }
+    
+    .Quotes-DetailsContainer .Quotes-Details {
+      font-size: 18px;
+      line-height: 32px;
+      text-align: left;
+      margin: 10px 0;
+    }
+  
+    .Quote-Left,
+    .Quote-Right {
+      font-size: 20px;
+    }
+  }
+  

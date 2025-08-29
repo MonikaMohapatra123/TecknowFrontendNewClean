@@ -1,0 +1,118 @@
+.photo-slider {
+  position: relative;
+  overflow: hidden;
+  width: 80%;
+  height: 750px;
+  margin: 0 auto; /* Center the slider horizontally */
+}
+
+.photoSlider-Heading {
+  font-size: 40px; /* Set font size for normal view */
+  text-align: center; /* Center the text */
+  font-weight: 500;
+  margin-top: 3rem;
+}
+
+
+.photo-container {
+  display: flex;
+  width: 100%; /* Change to 100% to fill the parent container */
+  height: 750px;
+  justify-content: center; /* Center the photo section horizontally */
+}
+
+.photo-section {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.photoimg-slider {
+  width: 500px;
+  height: auto;
+  object-fit: contain; /* Ensure the entire image fits within the container */
+  margin-right: 20px;
+  border-radius: 20%;
+}
+
+.photoslider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 34px;
+  cursor: pointer;
+  z-index: 2;
+  padding: 10px;
+  transition: box-shadow 0.3s ease; /* Add transition for smooth hover effect */
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.photoslider-button:hover {
+  color: var(--primary-color);
+}
+
+
+.photoslider-button.left {
+  left: 0;
+}
+
+.photoslider-button.right {
+  right: 0;
+}
+
+.Photodots-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.photodots {
+  display: flex;
+  justify-content: center;
+}
+
+.photodash {
+  width: 50px;
+  height: 2.3px;
+  background-color: var(--white-light);
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 4rem;
+  margin-top: 2rem;
+}
+
+.photodash.active {
+  background-color: var(--primary-color);
+}
+
+
+@media screen and (max-width: 786px) {
+  .photo-slider {
+    width: 100%; /* Set slider width to fill the viewport */
+    height: auto; /* Set height to auto to adjust according to content */
+  }
+
+  .photoSlider-Heading{
+    font-size: 26px;
+  }
+
+  .photo-container {
+    height: auto; /* Set height to auto to adjust according to content */
+  }
+
+  .photoimg-slider {
+    width: 100%; /* Set image width to fill its container */
+    height: 700px; /* Allow image height to adjust proportionally */
+    margin-right: 0; /* Remove right margin */
+  }
+
+  .photodash {
+    width: 40px; /* Adjust dot width for smaller screens */
+    height: 2.2px; /* Adjust dot height */
+    margin: 2px; /* Adjust margin */
+    margin-bottom: 2rem; /* Adjust bottom margin */
+    margin-top: 1rem; /* Adjust top margin */
+  }
+}

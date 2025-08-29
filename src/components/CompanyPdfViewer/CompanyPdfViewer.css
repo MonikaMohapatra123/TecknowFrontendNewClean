@@ -1,0 +1,65 @@
+.viewerPdf-container {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.headingPdf-container {
+  width: 50%; /* Set the width of the heading container to 40% */
+  margin-right: 20px; /* Add some spacing between the heading and the viewer */
+  
+}
+
+.headingPdf {
+  font-size: 40px; /* Adjust the font size as needed */
+  font-weight: bold; /* Adjust the font weight as needed */
+  color: var(--black); /* Adjust the color as needed */
+  margin-bottom: 0rem; /* Adjust the margin as needed */
+  text-align: left; /* Right align the text */
+  margin-left: 3rem;
+  font-weight: 700;
+  padding: 3rem;
+
+}
+
+.headingPdf::after {
+  content: "_";
+  color: var(--primary-color); /* Set the color of the underscore */
+}
+
+.viewerPdf-frame {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* For screens with width up to 786px */
+@media only screen and (max-width: 786px) {
+  .viewerPdf-container {
+    flex-direction: column; /* Stack items vertically */
+    padding: 10px; /* Adjust padding */
+  }
+
+  .headingPdf-container {
+    width: 100%; /* Take full width */
+    margin-right: 0; /* Remove margin */
+    margin-bottom: 20px; /* Add some space below the heading */
+  }
+
+  .headingPdf {
+    font-size: 30px; /* Adjust font size */
+    margin-bottom: 10px; /* Adjust margin */
+    text-align: center; /* Center align the text */
+    margin-left: 0; /* Reset margin left */
+    padding: 1rem; /* Adjust padding */
+  }
+
+  .viewerPdf-frame {
+    width: 100%; /* Take full width */
+  }
+}
+

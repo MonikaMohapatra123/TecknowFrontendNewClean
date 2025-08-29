@@ -1,0 +1,144 @@
+.contact-section {
+  display: flex;
+  width: 100%;
+  margin: 3rem auto;
+  background: #fafafa;
+}
+
+.map-wrapper {
+  position: relative;
+  flex: 1;
+}
+
+.leaflet-map {
+  width: 100%;
+  height: 400px;
+  margin-top: 70px;
+}
+
+.address-card {
+  position: absolute;
+  top: 120px;
+  left: 40px;
+  background: #fff;
+  padding: 20px 25px;
+  border: 2px solid #eee;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border-radius: 6px;
+  max-width: 260px;
+  z-index: 1000;
+}
+
+.address-card .icon {
+  font-size: 30px;
+  color: #ffb400;
+  margin-bottom: 10px;
+}
+
+.address-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #1a1a1a;
+}
+
+.address-card p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #444;
+}
+
+.form-wrapper {
+  flex: 1;
+  padding: 40px;
+  background: #fff;
+}
+
+.form-wrapper h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #111;
+}
+
+.form-wrapper p {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #ffc107;
+}
+
+.contact-form .form-row {
+  display: flex;
+  gap: 10px;
+}
+
+.contact-form textarea {
+  min-height: 100px;
+  resize: none;
+}
+
+.contact-form button {
+  background: #ffcc00;
+  border: none;
+  padding: 14px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background: #e6b800;
+}
+
+.compliance {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #444;
+}
+
+/* Responsive */
+@media (max-width: 786px) {
+  .contact-section {
+    flex-direction: column;
+  }
+
+  .map-wrapper, .form-wrapper {
+    width: 100%;
+  }
+
+  .leaflet-map {
+    height: 400px;
+  }
+
+  .address-card {
+    top: 20px;
+    left: 20px;
+  }
+
+  .form-wrapper {
+    padding: 25px;
+  }
+}

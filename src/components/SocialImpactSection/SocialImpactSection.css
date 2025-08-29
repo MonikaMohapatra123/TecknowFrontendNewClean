@@ -1,0 +1,52 @@
+.tecknow-sustainability-section {
+  position: relative;
+  background: url("../../../public/3.jpg") no-repeat center center/cover;
+  min-height: 100vh; /* full screen height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 60px 20px;
+}
+
+.tecknow-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: hsla(135, 87%, 18%, 0.7);
+  z-index: 1;
+}
+
+.tecknow-sustainability-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: auto;
+}
+
+.tecknow-sustainability-content h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.tecknow-sustainability-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 35px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .tecknow-sustainability-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .tecknow-sustainability-content p {
+    font-size: 1rem;
+    margin-bottom: 25px;
+  }
+}

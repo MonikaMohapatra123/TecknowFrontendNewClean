@@ -1,0 +1,203 @@
+.PhotoSlider-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+  
+  .PhotoSlider-slider {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .PhotoSlider-background {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .PhotoSlider-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .PhotoSlider-text {
+    color: white;
+    text-align: left;
+    padding: 40px;
+  }
+  
+  .PhotoSlider-heading {
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+  }
+  
+  .PhotoSlider-description {
+    font-size: 1.2rem;
+    text-align: left;
+    margin-right: 30rem;
+  }
+  
+  .PhotoSlider-year {
+    color: white;
+    text-align: right;
+  }
+  
+  .PhotoSlider-yearText {
+    font-size: 200px;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .PhotoSlider-dots {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30px, 1fr)); /* Adjust size as needed */
+    gap: 10px; /* Gap between dots */
+    justify-content: center;
+    padding: 10px;
+    background-color: var(--primary-color);
+    box-sizing: border-box; /* Ensures padding is included in the total width */
+  }
+  
+  .PhotoSlider-YearContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    position: relative; /* Ensure the line can be positioned relative to the container */
+}
+
+.PhotoSlider-dot {
+    width: 24px; /* Size of the dot */
+    height: 24px;
+    border: 2px solid white; /* White border around the dot */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative; /* Position for the inner dot and year */
+    transition: border-color 0.3s ease;
+    margin: 0 10px; /* Space between the dots */
+    margin-top:5px;
+}
+
+.PhotoSlider-dot:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -10px; /* Adjust to align with the dot's edge */
+    right: -10px; /* Extend to the right edge of the next dot */
+    height: 2px;
+    background-color: white; /* Color of the line */
+    z-index: -1; /* Ensure the line is behind the dot */
+    transform: translateY(-50%);
+}
+
+.PhotoSlider-dot:first-child:before {
+    display: none; /* Hide the line before the first dot */
+}
+
+.PhotoSlider-dot.active {
+    border-color: #fff; /* Change border color for active dot */
+}
+
+.PhotoSlider-dot-inner {
+    width: 12px; /* Size of the inner dot */
+    height: 12px;
+    background-color: white; /* Color of the inner dot */
+    border-radius: 50%;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+.PhotoSlider-dot-year {
+    position: absolute; /* Position the year above the dot */
+    top: -28px; /* Adjust as needed to position the year above the dot */
+    font-size: 18px; /* Adjust font size as needed */
+    font-weight: 300;
+    color: white; /* Color of the year text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Full width of the dot */
+    height: 100%; /* Full height of the dot */
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+.PhotoSlider-dot.active .PhotoSlider-dot-inner {
+    opacity: 1; /* Show the inner dot when the outer dot is active */
+}
+
+.PhotoSlider-dot.active .PhotoSlider-dot-year {
+    opacity: 1; /* Show the year when dot is active */
+}
+
+
+@media only screen and (max-width: 786px) {
+  .PhotoSlider-container {
+    height: 700px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .PhotoSlider-text {
+    padding: 20px;
+  }
+
+  .PhotoSlider-heading {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+
+  .PhotoSlider-description {
+    font-size: 1rem;
+    margin-right: 5rem; /* Reduce margin for smaller screens */
+  }
+
+  .PhotoSlider-yearText {
+    display: none;
+  }
+
+  .PhotoSlider-dots {
+    padding: 20px;
+    gap: 5px;
+  }
+
+  .PhotoSlider-dot {
+    width: 16px; /* Smaller dot size */
+    height: 16px;
+  }
+
+  .PhotoSlider-dot-inner {
+    width: 8px; /* Smaller inner dot size */
+    height: 8px;
+  }
+
+  .PhotoSlider-dot-year {
+    top: -25px; /* Adjust positioning for smaller screens */
+    font-size: 25px; /* Smaller font size */
+    font-weight: 700;
+  }
+
+  .PhotoSlider-YearContainer {
+    margin: 10px 0;
+  }
+}

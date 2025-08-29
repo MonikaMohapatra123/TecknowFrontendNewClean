@@ -1,0 +1,215 @@
+.ServicesCat-container{
+  margin-top: 1rem;
+}
+
+
+.headertop-services {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--white); /* Change as per your design */
+  padding: 40px; /* Adjust padding as needed */
+
+}
+
+.headertop-right {
+  flex: 1;
+  flex-basis: 50%; /* Each section takes up 50% of the width */
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.headertop-left {
+  flex: 1;
+  flex-basis: 50%; /* Each section takes up 50% of the width */
+  flex-grow: 0;
+  flex-shrink: 0;
+  text-align: left;
+}
+
+.ServicesCat-title {
+  font-size: 22px; /* Adjust font size as needed */
+  color: var(--black); /* Change color as per your design */
+  margin: 0; /* Remove default margin */
+  text-align: center;
+  font-weight: 300;
+}
+
+.ServicesCat-description {
+  font-size: 16px; /* Adjust font size as needed */
+  color: var(--white-hover); /* Change color as per your design */
+  margin: 0; /* Remove default margin */
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.LinkServices{
+  font-size: 17px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.LinkServices:hover{
+  color: var(--primary-color);
+  transform: translateX(5px);
+}
+
+.iconServices:hover {
+  transform: translateX(5px); /* Adjust the amount to move the link to the right */
+}
+
+
+
+.card-servicesall {
+  display: flex;
+  flex-direction: row;
+}
+
+.cardservices-container {
+  position: relative;
+
+}
+
+
+.cardservices-image {
+      width: 400px;
+      height: 500px;
+      object-fit: cover;
+      margin-right: 10px;
+      cursor: pointer;
+      transition: width 0.7s ease-in-out;
+      filter: brightness(50%);
+      position: relative;
+}
+
+.cardservices-image:hover{
+  width: 1000px;
+}
+
+.cardservices-title {
+  position: absolute; /* Position the title absolutely */
+  top: 20px; /* Adjust top position as needed */
+  left: 20px; /* Adjust left position as needed */
+  z-index: 1; /* Ensure the title is above the image */
+  margin: 0; /* Remove default margin */
+  color: var(--white); /* Change title color */
+  font-size: 21px; /* Adjust title font size */
+  font-weight: 800; /* Optionally set font weight */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow for better visibility */
+  pointer-events: none;
+}
+
+.cardservices-description {
+  text-align: left;
+  position: absolute;
+  top: 90px;
+  left: 20px;
+  right: 20px;
+  z-index: 0;
+  margin: 0;
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 400;
+  opacity: 0;
+  transition: opacity ease-in-out 1.5s;
+  pointer-events: none;
+}
+
+.cardservices-container:hover .cardservices-description {
+  opacity: 1; /* Fade in the description */
+}
+
+
+.LinkServices2 {
+  position: absolute; /* Position the link absolutely */
+  top: 200px; /* Adjust top position as needed */
+  left: 20px; /* Adjust left position as needed */
+  z-index: 2; /* Ensure the link is above the image and other elements */
+  color: var(--white); /* Change link color */
+  text-decoration: none; /* Remove default underline */
+  font-size: 16px; /* Adjust link font size */
+  font-weight: 300; /* Optionally set font weight */
+ 
+  opacity: 0; /* Set initial opacity to 0 */
+  transition: opacity  ease-in-out 1.5s; /* Add transition for opacity with delay */
+  
+  pointer-events: none;
+}
+
+.cardservices-container:hover .LinkServices2 {
+
+  opacity: 1; /* Fade in the link */
+}
+
+.LinkServices2:hover {
+  color: var(--primary-color); /* Change link color on hover */
+  transform: translateX(5px); /* Move the link slightly to the right on hover */
+}
+
+.iconServices {
+  margin-left: 5px; /* Adjust margin between link text and icon */
+}
+
+
+@media (max-width: 768px) {
+  .headertop-services {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .headertop-left,
+  .headertop-right {
+    flex-basis: auto;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .ServicesCat-title {
+    font-size: 20px;
+  }
+
+  .ServicesCat-description {
+    font-size: 14px;
+    margin-bottom: 0.5rem;
+  }
+
+  .card-servicesall {
+    flex-direction: column;
+  }
+
+  .cardservices-container {
+    position: relative;
+    margin-bottom: 0;
+
+  }
+
+  .cardservices-image {
+    width: 100%;
+    height: 150px;
+    margin-right: 0;
+  }
+
+  .cardservices-title {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1; /* Ensure the title is above the image */
+    margin: 0;
+    color: var(--white);
+    font-size: 24px;
+    font-weight: 200;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: calc(100% - 40px); /* Adjust width to fit within the container */
+  }
+
+  .cardservices-description,
+  .LinkServices2 {
+    display: none;
+  }
+
+  .LinkServices2 {
+    margin-top: 10px;
+  }
+}
+

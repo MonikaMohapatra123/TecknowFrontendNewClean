@@ -1,0 +1,223 @@
+/* Carousel.css */
+
+.Hiringcard-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .HiringcardSlider-Heading {
+    font-size: 40px; /* Adjust the font size as needed */
+    font-weight: bold; /* Adjust the font weight as needed */
+    color: var(--black); /* Adjust the color as needed */
+    margin-bottom: 0rem; /* Adjust the margin as needed */
+    text-align: center; /* Center align text */
+    font-weight: 700;
+  }
+  
+  
+  .Hiringcard-container {
+    width: 500px; /* Adjust as needed */
+    height: 560px;
+    overflow: hidden;
+    display: flex; /* Use flexbox to center contents */
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    background-color: var(--white); /* Optional: Set background color */
+  }
+  
+  
+  .Hiringcard-about {
+    display: flex;
+    width: 1100px; /* Adjust as needed */
+    height: 550px; /* Adjust as needed */
+    background-color: var(--white); /* Set background color to white */
+    margin: 0 auto; /* Center the card */
+    transition: transform 0.3s ease;
+  }
+  
+  .Hiringright-section {
+    width: 100%; /* Make the right section take up 50% of the card */
+    padding: 20px; /* Add padding for spacing */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center contents vertically */
+  }
+  
+  .Hiringright-section .Hiringcard-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .Hiringright-section h2 {
+    margin-top: 0; /* Remove default margin */
+  }
+  
+  .Hiringimg-slider {
+    max-width: 90%; /* Adjust as needed */
+    max-height: 90%; /* Adjust as needed */
+    border-radius: 20px;
+  }
+  
+  
+  .Hiringcard-content {
+    padding: 20px;
+    color: var(--black); /* Set text color to black */
+
+  }
+  
+  .Hiringcard-content h2 {
+    font-size: 25px;
+    font-weight: 600;
+    margin: 0; /* Remove default margin for the heading */
+    text-align: left;
+    color: var(--primary-color);
+  }
+
+  .HiringParaExperience{
+    margin: 10px 0; /* Add margin for spacing between heading and paragraph */
+    text-align: left;
+    font-size: 17px;
+    font-weight: 400;
+  }
+
+  .HiringParaQualification{
+    margin: 10px 0; /* Add margin for spacing between heading and paragraph */
+    text-align: left;
+    font-size: 17px;
+    font-weight: 400;
+  }
+
+  .HiringParaLocation{
+    margin: 10px 0; /* Add margin for spacing between heading and paragraph */
+    text-align: left;
+    font-size: 17px;
+    font-weight: 400;
+  }
+
+  .HiringParaDetails{
+    margin: 10px 0; /* Add margin for spacing between heading and paragraph */
+    text-align: left;
+    font-weight: 300;
+    font-size: 15px;
+  }
+  
+  .Hiringslider-button {
+    background-color: var(--white);
+    color: var(--black);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .Hiringslider-button.left {
+    font-size: 30px;
+    margin-right: 10px;
+  }
+  
+  .Hiringslider-button.right {
+    font-size: 30px;
+    margin-left: 10px;
+  }
+  
+  .Hiringslider-button:hover {
+    color: var(--primary-color);
+  }
+  
+  /* Styling for dots */
+  .Hiringdots-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; /* Adjust margin as needed */
+  }
+  
+  .Hiringdots {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .Hiringdash {
+    width: 50px;
+    height: 2px;
+    background-color: #ccc;
+    margin: 5px; /* Adjust margin to separate dashes */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 2rem;
+  }
+  
+  .Hiringdash.active {
+    background-color: var(--primary-color);
+  }
+  
+
+
+/* Media query for responsiveness */
+@media screen and (max-width: 1080px) {
+
+  .HiringcardSlider-Heading {
+    font-size: 32px; /* Adjust font size for smaller screens */
+    margin-bottom: 1rem; /* Adjust margin for smaller screens */
+  }
+  
+  .Hiringcard-container {
+    width: 70%; /* Adjust container width for smaller screens */
+    height: auto;
+  }
+
+  .Hiringcard-about {
+    width: 100%; /* Adjust card width to fit smaller screens */
+    flex-direction: column; /* Change flex direction to stack elements vertically */
+    height: auto; /* Allow height to adjust based on content */
+  }
+
+  .Hiringleft-section,
+  .Hiringright-section {
+    width: 100%; /* Make sections take up full width on smaller screens */
+  }
+
+  .Hiringimg-slider {
+    width: 60%; /* Adjust image width for smaller screens */
+    max-width: none; /* Remove max-width to allow image to fill container */
+    height: auto; /* Allow height to adjust based on content */
+    margin: 0 auto; /* Center image horizontally */
+    margin-top: 1rem;
+  }
+
+  .Hiringright-section {
+    padding: 20px 0; /* Adjust padding for spacing */
+  }
+
+  .Hiringcard-content {
+    text-align: center; /* Center text horizontally */
+  }
+
+  .Hiringcard-content p {
+    font-size: 12px;
+  }
+
+  .Hiringcard-content h2 {
+    font-size: 30px;
+  }
+
+  .Hiringslider-button.left,
+  .Hiringslider-button.right {
+    font-size: 24px; /* Reduce button font size for smaller screens */
+    margin: 0 5px; /* Adjust margin for spacing */
+  }
+
+  .Hiringdash {
+    width: 20px; /* Reduce dash width for smaller screens */
+    margin: 0 2px; /* Adjust margin for spacing */
+  }
+
+  .Hiringdots-container {
+    margin-top: 5px; /* Adjust margin for dots container */
+    margin-bottom: 10px;
+  }
+}

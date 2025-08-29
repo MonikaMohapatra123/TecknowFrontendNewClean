@@ -1,0 +1,35 @@
+.mapContainer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.headingMap {
+  font-size: 40px; /* Adjust the font size as needed */
+  font-weight: bold; /* Adjust the font weight as needed */
+  color: var(--black); /* Adjust the color as needed */
+  margin-bottom: 3rem; /* Adjust the margin as needed */
+  text-align: center; /* Center align text */
+  font-weight: 700;
+}
+
+.map-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 800px;
+  width: 80%;
+}
+
+/* Media query for screens with a max width of 786px */
+@media (max-width: 786px) {
+  .headingMap {
+    font-size: 30px; /* Adjust the font size as needed */
+  }
+
+  .map-image {
+    height: 250px; /* Adjust the height as needed */
+    width: 95%; /* Adjust the width as needed */
+  }
+}

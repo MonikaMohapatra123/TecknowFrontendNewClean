@@ -1,0 +1,260 @@
+/* Footer */
+/* Footer */
+/* Footer */
+.footer {
+  position: relative;
+    background: var(--black);
+    color: var(--white);
+    padding: 10px 0;
+    z-index: 2;
+  }
+
+  .scrollToTopButton {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 12px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    cursor: pointer;
+  }
+  
+
+
+
+  .HeadingBefore {
+    margin-left: auto;
+    padding : 50px;
+
+  }
+  
+  .Footer-headings {
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 10px;
+  }
+  
+  .Footer-Description {
+    font-size: 16px;
+    font-weight: 300;
+    padding-right: 14rem;
+  }
+
+  .gap-footer{
+    margin-bottom: 3rem;
+  }
+
+  .iconFooter {
+    font-size: 20px;
+    display: flex;
+    align-items: center; /* Center vertically */
+    margin-bottom: 0.6rem;
+    margin-left: 0.6rem;
+  }
+
+
+
+  
+  
+  
+  
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow columns to wrap to the next line on smaller screens */
+    justify-content: space-around;
+    margin-left: 20px;
+  }
+  
+  .footer-column {
+    width: 10%;
+    margin-bottom: 30px; /* Add some space between columns */
+margin-right: 1rem;
+  }
+  
+  .footer-column h2 {
+    font-size: 23px;
+    margin-bottom: 20px;
+    color: var(--white);
+    text-decoration: underline;
+    font-weight: 400;
+  }
+  
+  .footer-column h2:hover {
+    color: var(--primary-color); /* Change color on hover */
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-column ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-column ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 14px;
+    transition: text-decoration 1s ease; /* Slow transition effect */
+    font-weight: 300;
+}
+
+.footer-column ul li a:hover {
+    color: var(--primary-color); /* Change color on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+  
+  .footer-column ul li svg {
+    width: 24px; /* Adjust icon size */
+    height: 24px;
+    margin-right: 10px; /* Adjust spacing between icon and text */
+    color: var(--white); /* Icon color */
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid var(--white);
+    background-color: #242424;
+  }
+  
+  /* Location Cards Container */
+  .location-cards-container {
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Adjust as needed for spacing */
+  gap: 20px; /* Adjust spacing between cards */
+  width: 600px;
+  height: auto;
+
+  }
+  
+.location-card {
+  
+  margin-bottom: 50px; /* Adjust margin */
+  padding: 15px; /* Adjust padding */
+  border: 1px solid var(--white);
+  border-radius: 30px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 1, 0.8); /* Adjust box shadow */
+  background-color: var(--white);
+  height: auto; /* Ensures height adjusts to content */
+  box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+  display: flex; /* Optional: Add flex display for layout */
+  flex-direction: column; /* Optional: Add flex direction for layout */
+}
+
+  
+  
+  /* Location Card Title */
+  .location-card h2 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--black);
+    font-weight: 400;
+    text-align: center;
+  }
+  
+  /* Location Card Content */
+  .location-card p {
+    margin: 20px 0;
+    font-weight: 300;
+    color: var(--black);
+  }
+
+  /* .location-card p:hover{
+    color: var(--primary-color);
+  } */
+
+  .location-card a:hover{
+    color: var(--primary-color);
+  }
+
+  .location-card a{
+    font-weight: 400;
+    color: var(--black);
+  }
+
+  .link-innotech{
+    color: var(--white);
+    text-decoration: underline;
+  }
+
+  .copyRight{
+    font-weight: 300;
+    font-size: 14px;
+    padding: 10px;
+    margin-top: -0.5rem;
+  }
+
+  .footer-logo{
+    width: 200px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+  }
+
+  
+  /* Media queries for responsiveness */
+  @media only screen and (max-width: 786px) {
+    .footer-column {
+      width: 100%; /* Make columns full width on smaller screens */
+    }
+
+
+
+
+    .location-cards-container {
+        justify-content: center; /* Center cards on smaller screens */
+      }
+      
+      .location-card {
+        flex-basis: calc(100% - 20px); /* Adjust card width to full width on smaller screens */
+        margin-bottom: 30px; /* Adjust margin bottom for smaller screens */
+        padding: 15px; /* Adjust padding */
+        border: 1px solid var(--white);
+        border-radius: 8px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Adjust box shadow */
+        margin-right: auto;
+      }
+      
+      /* Location Card Content */
+      .location-card p {
+        font-size: 0.8rem;
+      }
+
+      .copyRight{
+        font-size: 12px;
+        padding: 10px;
+      }
+
+
+      .HeadingBefore {
+        margin-left: auto;
+        padding : 20px;
+    
+      }
+      
+      .Footer-headings {
+        font-size: 23px;
+        
+      }
+      
+      .Footer-Description {
+        font-size: 14px;
+        
+        padding-right: 0rem;
+        margin-bottom: 2rem;
+      }
+    
+      .gap-footer{
+        margin-bottom: 3rem;
+      }
+    
+  
+  }
+  

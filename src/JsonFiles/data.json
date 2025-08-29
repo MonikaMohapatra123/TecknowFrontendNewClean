@@ -1,0 +1,518 @@
+[
+  {
+    "HomeIntro": [
+      {
+        "HomeIntroHeading": "Chimneys",
+        "HomeIntroPara": "Our state-of-the-art chimneys are designed to enhance efficiency and sustainability in your projects, ensuring a cleaner and brighter future.",
+        "HomeIntroRedirect": "Case Studies",
+        "HomeIntroLink": "/services/1",
+        "HomeIntroImage": "/images/Chimneys/Farakka6.webp"
+      },
+      {
+        "HomeIntroHeading": "Cooling Tower(NDTC)",
+        "HomeIntroPara": "Teknow Infra's cooling towers are engineered with eco-friendly materials and processes to help you achieve superior energy efficiency and sustainability.",
+        "HomeIntroRedirect": "Case Studies",
+        "HomeIntroLink": "/services/2",
+        "HomeIntroImage": "/images/Chimneys/image1.webp"
+      },
+      {
+        "HomeIntroHeading": "Silos",
+        "HomeIntroPara": "Our silos provide robust, efficient storage solutions, ensuring the safety and reliability of your materials with sustainable practices.",
+        "HomeIntroRedirect": "Case Studies",
+        "HomeIntroLink": "/services/3",
+        "HomeIntroImage": "/images/Chimneys/silosMain.webp"
+      },
+      {
+        "HomeIntroHeading": "Power Plant Civil Work",
+        "HomeIntroPara": "Delivering comprehensive civil work solutions for power plants, we focus on sustainable growth and feasible outcomes to meet your energy needs.",
+        "HomeIntroRedirect": "Case Studies",
+        "HomeIntroLink": "/services/4",
+        "HomeIntroImage": "/images/CivilWorks/2AbsorberMundra.webp"
+      },
+      {
+        "HomeIntroHeading": "Structural Steel Fabrication",
+        "HomeIntroPara": "Our structural steel fabrication services ensure precision, durability, and forward-thinking designs, perfect for modern construction demands.",
+        "HomeIntroRedirect": "Case Studies",
+        "HomeIntroLink": "/services/5",
+        "HomeIntroImage": "/images/CivilWorks/1AbsorberMundra.webp"
+      }
+    ],
+    "AboutUsHeadingAbove": "Teknow at a Glance",
+    "AboutUsHeadingBelow": "Transforming for the future & resourcing responsibly",
+    "AboutUsDescription": "At Teknow, we are focused on sustainable growth while setting high standards of governance and transparency. At our core, we have a mission to empower the transition to a greener economy with our transformative metals.",
+    "AboutUsPhoto1": "/images/Chimneys/Farakka8.webp",
+    "AboutUsPhoto2": "/images/Chimneys/image1.webp",
+    "AboutUsPhoto3": "/images/Chimneys/Farakka6.webp",
+    "highlights": [
+      {
+        "name": "PROJECT INCHARGE",
+        "count": 17
+      },
+      {
+        "name": "ENGINEERS",
+        "count": 100
+      },
+      {
+        "name": "FOREMAN / SUPERVISOR",
+        "count": 88
+      },
+      {
+        "name": "WORKERS",
+        "count": 1000
+      }
+    ],
+    "sustainabilityHeader": "Sustainability: The Heart of Our Mission_",
+    "sustainabilityPara": "Learn how we embed environmental, social, and governance goals into every facet of our business decisions. Sustainability is a key component of our Strategic Plan, driving us to provide solutions that help our customers progress towards a more efficient and sustainable global future.",
+    "sustainabilityLink": "/sustainability",
+    "sustainabilityLinkPara": "Futher information",
+    "sustainabilityimage": "/images/CivilWorks/Solapur-19.webp",
+    "ContactHeader": "We are here to help you with your project_",
+    "ContactDescription": "Need expert guidance or have questions about your construction project? Reach out to our team for personalized assistance and professional advice. We're here to ensure your project's success every step of the way. ",
+    "ContactLink": "/contact",
+    "WhyUSDescription": "Our value proposition is built on the pillars of efficiency and sustainability, ensuring that every aspect of our operations contributes to a better future. We leverage cutting-edge technology as a powerful instrument of transformation, driving innovation and creating tangible value for our customers and stakeholders.",
+    "WhyUStitle": "Why Teknow Infra Engineers Pvt Ltd",
+    "WhyUSimage": "/images/whyPriya.webp",
+    "WhyUSAboutimage": "/images/Tanda-Thermal-Power-Station-priyainfra.com-–-GE-Power-India-Pvt-Ltd.webp",
+    "WhyUSAboutimage2": "/images/Tuticorin-Thermal-Power-Project-–priyainfra.com-Gammon-India-Ltd.webp",
+    "WhyUSAboutTitle": "Who We Are",
+    "WhyUSAboutPara": "Teknow Infra Engineers Pvt. Ltd., formerly known as Teknow Constructions, was founded in 1983. Initially specializing in steel fabrication and erection, we soon moved into civil engineering contracting and quickly established a reputation for delivering high-quality projects on time, with safety as a cornerstone of our operations. With over four decades of specialized experience, our company is committed to delivering high-quality construction products. We leverage cutting-edge technology and rigorous safety standards to construct chimneys that meet the demanding requirements of modern industries. Trust us to build the backbone of your industrial operations with precision and reliability. Beginning as a subcontractor associating with giant construction companies, Teknow Constructions rapidly took on engineering and construction assignments of increasing sophistication, backed by a panel of experienced engineers. Teknow Infra owes its success to the creativity, hard work, and dedication of its employees. Working together as a large, perfectly coordinated team, we realize even complex construction projects on schedule and at the best price. We have an admirable track record, solid experience, and a proven strength in delivery norms across our full spectrum of services",
+    "ScrollEffectHeader": "We are Tier 1 Supplier and the technolgoy expert you need with multi-sector capabilities_",
+    "ScrollEffectPara1": "We specialize in providing top-tier technology solutions across various sectors, delivering unmatched expertise and innovation.",
+    "ScrollEffectHeader2": "we manage the entire life cycle of the project: from the creation of the infrastructure or process to the R&D",
+    "ScrollEffectPara2": "Our comprehensive project management approach ensures seamless coordination and successful outcomes from inception to research and development.",
+    "ScrollEffectProjectsHead": "Projects",
+    "ScrollEffectprojectsPara": "We create new infrastructures by supporting our clients during the entire project process and implementing the main design and engineering requirements to provide a turnkey solution. ",
+    "ScrollEffectServicesHead": "Services",
+    "ScrollEffectServicesPara": "We centralise all the services required for the O&M of the infrastructures and processes we have created, while maintaining a long-term commitment to efficiency.",
+    "ValueList": [
+      {
+        "ValueListHeader": "Quality Excellence",
+        "ValueListPara": "Committed to delivering superior construction products and services.",
+        "icon": "faGem"
+      },
+      {
+        "ValueListHeader": "Safety First",
+        "ValueListPara": "Adhering to rigorous safety standards to ensure the well-being of all stakeholders.",
+        "icon": "faShieldAlt"
+      },
+      {
+        "ValueListHeader": "Integrity",
+        "ValueListPara": "Conducting business with honesty and transparency.",
+        "icon": "faHandshake"
+      },
+      {
+        "ValueListHeader": "Customer Focus",
+        "ValueListPara": "Exceeding client expectations through personalized service and responsive communication.",
+        "icon": "faUsers"
+      },
+      {
+        "ValueListHeader": "Teamwork",
+        "ValueListPara": "Valuing collaboration and the diverse talents of our employees.",
+        "icon": "faPeopleArrows"
+      },
+      {
+        "ValueListHeader": "Commitment to Deadlines",
+        "ValueListPara": "Completing projects on time, every time.",
+        "icon": "faClock"
+      },
+      {
+        "ValueListHeader": "Adaptability",
+        "ValueListPara": "Continuously improving to meet the evolving needs of the industry.",
+        "icon": "faSyncAlt"
+      }
+    ],
+    "Timeline": [
+      {
+        "Year": "1983",
+        "id": 1,
+        "heading": "Founding",
+        "description": "The company was established in 1983 with a mission to provide high-quality construction services, starting with Erection work segmental construction in roads and bridges",
+        "image": "/images/Timeline/Timeline1.webp"
+      },
+      {
+        "Year": "1989",
+        "id": 2,
+        "heading": "Grabbing Opportunities",
+        "description": "Concentrated on small residential projects, civil work, Airport terminal building.",
+        "image": "/images/Timeline/Timeline2.webp"
+      },
+      {
+        "Year": "1995",
+        "id": 3,
+        "heading": "Expansion and Diversification",
+        "description": "Building a reputation for reliability and quality.",
+        "image": "/images/Timeline/Timeline3.webp"
+      },
+      {
+        "Year": "2001",
+        "id": 4,
+        "heading": "Growth and Diversification",
+        "description": "Expanding its services from chimney construction and NDT consulting to comprehensive civil engineering contracting",
+        "image": "/images/Timeline/Timeline4.webp"
+      },
+      {
+        "Year": "2006",
+        "id": 5,
+        "heading": "Market Expansion",
+        "description": "Entered the commercial construction market, taking on larger projects.",
+        "image": "/images/Timeline/Timeline5.webp"
+      },
+      {
+        "Year": "2011",
+        "id": 6,
+        "heading": "Portfolio Diversification",
+        "description": "Portfolio Diversification: Added industrial and infrastructure projects to the portfolio. Completed 100 projects & workforce grew to 50",
+        "image": "/images/Timeline/Timeline6.webp"
+      },
+      {
+        "Year": "2016",
+        "id": 7,
+        "heading": "National Recognition and Major Contracts.",
+        "description": "Implemented rigorous quality control measures and safety protocols.",
+        "image": "/images/Timeline/Timeline7.webp"
+      },
+      {
+        "Year": "2021",
+        "id": 8,
+        "heading": "Consolidation and Brand Strengthening",
+        "description": "Received several industry awards for excellence in construction and design.Focused on strengthening brand presence and customer loyalty, now our workforce grew to 300 employees.",
+        "image": "/images/Timeline/Timeline8.webp"
+      },
+      {
+        "Year": "2024-",
+        "id": 9,
+        "heading": "And Our Future Vision!",
+        "description": "As we move forward, Teknow Infra Engineers is dedicated to embracing innovative technologies and sustainable practices. Our focus will be on expanding into new markets, enhancing our project capabilities, and continuing to deliver exceptional quality in every aspect of our work. We are committed to driving growth through innovation while maintaining our core values of reliability and excellence.",
+        "image": "/images/Timeline/Timeline9.webp"
+      }
+    ],
+    "OfficeImages": [
+      {
+        "image": "/images/officeImage1.webp"
+      },
+      {
+        "image": "/images/officeImage2.webp"
+      },
+      {
+        "image": "/images/officeImage3.webp"
+      }
+    ],
+    "TitleHighlights": "HIGHLIGHTS",
+    "ValueHeader": "Core Values That Drive Our Success",
+    "ValuePara": "Our business is driven by core values: Quality Excellence in our construction products, Safety First for all stakeholders, Integrity in our operations, Customer Focus through personalized service, Teamwork valuing collaboration, Commitment to Deadlines, and Adaptability to industry changes.",
+    "ServicesDescription": "Teknow performs its activities in five large fields",
+    "Servicesimage": "/images/services.webp",
+    "Servicestitle": "Areas of Activity",
+    "ServicesCatTitle": "Our Areas of Activity",
+    "ServicesCatDescription": "We offer integral end-to-end services and projects.",
+    "ServicesCatLinkName": "All Area Of Activity",
+    "ServicesLink": "/services",
+    "ProjectsDescription": "At Teknow We provide services and end-to-end projects. We accompany our clients in their transition towards more efficient and environmentally sustainable business models thanks to our knowledge of the business processes and the application of technology with a different approach.",
+    "Projectsimage": "/images/Projects.webp",
+    "Projectstitle": "Case studies",
+    "MapCity": "/images/MapChartMap.webp",
+    "HeadingMap": "Our Pressence_",
+    "PdfCompany": "/images/company.pdf",
+    "CompanyDescription": "At Teknow Infra, we deliver top-quality construction services across diverse specialized projects, including RCC and structural steel chimneys, civil engineering for power plants, and critical infrastructure development such as bridges, roads, flyovers, and metro projects.",
+    "Companyimage": "/images/Company.webp",
+    "Companytitle": "Company",
+    "CompanyAboutimage": "/images/logo.webp",
+    "CompanyAboutimage2": "/images/CivilWorks/2AbsorberMundra.webp",
+    "CompanyAboutTitle": "Comprehensive services and projects dedicated to sustainability and efficiency",
+    "CompanyAboutPara": "We always say that it is not what, but how we do it. We were born closely linked to the telecommunications sector 20 years ago and during our lifetime we have managed to successfully transfer our know-how to areas such as the industrial and the energy sectors. We have achieved this thanks to our commitment to being the trusted partner of our clients, accompanying them in the transformation of their business. Our value proposition is based on a 360º approach, from the design and development of projects to the subsequent operation and maintenance. This approach allows us to have a global vision so we can apply technology and guarantee maximum efficiency and sustainability throughout the project life cycle.",
+    "companyStackHolder": [
+      {
+        "name": "Mr. Dilip Ibrahim",
+        "position": "Executive Director",
+        "details": "Dileep is a seasoned business leader with extensive industry connections across India, UAE, and Australia. As a Director at Teknow Infra, he utilizes his strong communication skills and network to drive the company's success in civil construction, with a focus on FGD chimney works. In addition to his role at Teknow Infra, Dileep is the Co-founder of InQ Innovation Global and has notable experience in media and early-stage investments. His strategic vision and leadership are crucial in advancing Teknow Infra’s mission to deliver innovative and high-quality infrastructure solutions. Dileep holds a Master’s degree in Science from the University of Kerala.",
+        "image": "/images/ibrahim.jpeg"
+      },
+      {
+        "name": "Dhananjay Kumar Singh",
+        "position": "Executive Director",
+        "details": "He completed his Bachelor’s Degree in Civil Engineering from Pune. With three decades of dedicated experience in the power sector, road infrastructure, and tunneling, he has cultivated deep expertise in civil engineering. His career commenced at M/S Gammon India Ltd in 1993, where he ascended from Junior Engineer to General Manager. During this tenure, he played a pivotal role in numerous high-profile power sector projects, specializing in RCC chimneys using slip form, as well as NDCTs and IDCTs employing jump-form techniques. He has continued to make substantial contributions, successfully completing 35 chimneys, 3 NDCTs, and 2 IDCTs.",
+        "image": "/images/dkSingh.jpg"
+      },
+      {
+        "name": "Andipat Devadasan",
+        "position": "Managing Director",
+        "details": "Mr. A. Devdasan began his career in construction with segmental erection for road and bridge projects. In the 1990s, he expanded into residential and commercial construction, as well as Ready-Mix Concrete (RMC) production. As the new millennium approached, he ventured into larger infrastructure projects, including chimneys and Metro rail systems, showcasing his technical expertise and leadership. In the following decade, he further diversified into industrial projects, solidifying the company's reputation for quality. His strategic focus on brand strength and customer loyalty has driven steady growth, making the company a trusted name in the industry.",
+        "image": "/images/whyPriya.webp"
+      }
+    ],
+    "quoteDetails": "The unwavering commitment of our business strengthens our confidence to continue pursuing the path outlined in our Strategic Plan, firmly establishing Teknow Infra as a leader in specialized services and projects. Our goal is to drive the shift toward more efficient and sustainable business models.",
+    "quotesName": "Andipat Devadasan",
+    "quotesDesignation": "CEO OF Teknow INFRA",
+    "quotesImage": "/images/nature.webp",
+    "SustainabilityDescription": "Our commitment to sustainability is at the core of our operations, ensuring that every project we undertake contributes positively to the environment. We integrate eco-friendly practices and materials, minimizing our carbon footprint and promoting a greener future.",
+    "Sustainabilityimage": "./images/nature.webp",
+    "SustainabilityTitle": "Sustainability",
+    "SustainabilityAboutPara": "At our construction company, sustainability is more than just a buzzword—it's a guiding principle. From reducing waste and conserving energy to using sustainable materials and green building techniques, we are dedicated to creating structures that are not only durable and efficient but also environmentally responsible.",
+    "SustainabilityAbouttitle": "Sustaining the Nature and Our Contribution",
+    "SustainabilityAboutimage1": "/images/SustainableAbout1.webp",
+    "SustainabilityAboutimage2": "/images/SustainableAbout2.webp",
+    "SustainabilityimageIntro": "/images/SustainableIntro.webp",
+    "ContactusDescription": "contact us now to get more details",
+    "Contactusimage": "/images/bg005ff9.webp",
+    "Contactustitle": "Contact Us",
+    "ContactMap": [
+      {
+        "ContactOffice": "Head Office",
+        "ContactOfficeCity": "Kerala",
+        "ContactOfficeAddress": "Teknow Infra Engineers Pvt Ltd Devarcade, Near Kadalundi Rly Gate, Kadalundi, Calicut, Kerala – 673 302",
+        "ContactOfficeAddressLink": "https://www.google.com/maps/place/Dev+Arcade,+Chaliyam+-+Kadalundi+Rd,+Kadalundi,+Kerala+673302/@11.1375175,75.8215147,17z/data=!3m1!4b1!4m10!1m2!2m1!1sPriya+Infra+Engineers+Pvt+Ltd+Dev+Arcade,+Near+Kadalundi+Railway+Gate,+Kadalundi,+Calicut,+Kerala+%E2%80%93+673+302!3m6!1s0x3ba65120929522d7:0xeadbb043bd26cf73!8m2!3d11.1375175!4d75.8263856!15sCm1Qcml5YSBJbmZyYSBFbmdpbmVlcnMgUHZ0IEx0ZCBEZXYgQXJjYWRlLCBOZWFyIEthZGFsdW5kaSBSYWlsd2F5IEdhdGUsIEthZGFsdW5kaSwgQ2FsaWN1dCwgS2VyYWxhIOKAkyA2NzMgMzAykgERY29tcG91bmRfYnVpbGRpbmfgAQA!16s%2Fg%2F1hjgwz_lr?entry=ttu",
+        "ContactOfficePhone": "Phone: +91 495 247 1234",
+        "ContactOfficeLat": "11.137517489034044",
+        "ContactOfficeLong": "75.82638549804688"
+      }
+    ],
+    "CareerDescription": "Join our dynamic team where innovation meets collaboration. At the heart of our company, we prioritize a vibrant work culture that fosters creativity, inclusivity, and continuous growth. Embrace the future with us as we blend cutting-edge technology with sustainable practices to shape tomorrow's world.",
+    "Careertitle": "Career with us",
+    "Careerimage": "/images/career.webp",
+    "CareerAboutimage": "/images/logo.webp",
+    "CareerAboutimage2": "/images/officeImage1.webp",
+    "CareerAboutTitle": "Something about us",
+    "CareerAboutPara": "‘Teknow Infra Engineers Private Limited’ is the evolution of ‘Teknow Constructions’, founded in 1983, into a large-scale multi-disciplinary civil engineering and construction firm. From its modest beginnings 38 years ago, Teknow Infra today is synonymous with trust in the infrastructure development sector. The Teknow brand started its journey with sub-contractor service roles specializing in structural steel fabrication and ready-mix supply. Over the years, the company accumulated experience, knowledge, and skills, gradually expanding roles and undertaking bigger, diverse, and more responsible positions, finally emerging as the main building contractor for large-scale civil engineering projects encompassing Power, Transportation, Industrial, and Commercial sectors. With an array of successful projects under its belt, Teknow Infra boasts of a highly trained arsenal of engineers, supervisors, and workers who can tackle any unforeseen situation and reduce errors to an imperceptible level. This makes Teknow Infra one of the most efficient players in the game, running complex processes like clockwork and always delivering on time.",
+    "CareerHiring": [
+      {
+        "position": "Civil Engineer",
+        "Experience": "3-5 years",
+        "Openings": "3",
+        "Qualification": "Diploma/ B. Tech Civil (Degree with 3, Diploma with 5)",
+        "Location": "Mumbai, Maharashtra",
+        "details": "Responsible for planning and scheduling project timelines and milestones using appropriate tools."
+      },
+      {
+        "position": "Safety Officer",
+        "Experience": "2-3 years",
+        "Openings": "1",
+        "Qualification": "Diploma in Safety from a reputed institution",
+        "Location": "Mumbai, Maharashtra",
+        "details": "Ensure the implementation of safety protocols and regulations to maintain a safe work environment. Conduct regular safety audits and training sessions."
+      },
+      {
+        "position": "Mechanical Engineer",
+        "Experience": "2-5 years",
+        "Openings": "1",
+        "Qualification": "Diploma/ B. Tech Mechanical (Degree with 3, Diploma with 5)",
+        "Location": "Mumbai, Maharashtra",
+        "details": "Oversee the planning, implementation, and tracking of a specific short-term project which has a beginning, an end, and specified deliverables. Ensure mechanical systems and machinery run smoothly and efficiently."
+      }
+    ],
+    "FooterDescriptionHeader": "Quality Excellence, Safety First & Integrity",
+    "FooterDescriptionPara": "At Teknow Infra Engineers Pvt Ltd, we are committed to upholding the highest standards of quality, prioritizing safety, and maintaining integrity in all our endeavors. We provide a range of services and comprehensive project solutions, supporting our clients through every step of their journey. By leveraging our expertise in business processes and innovative technology, we ensure efficient and sustainable outcomes. Our unique approach guarantees that our clients achieve their goals with excellence, safety, and unwavering integrity.",
+    "ImagesLogo": "/images/logo.webp",
+    "CompanyName": "Teknow Infra Engineers Pvt Ltd",
+    "Email": "contracts@Teknowinfra.com",
+    "Location1": "https://www.google.com/maps/place/Dev+Arcade,+Chaliyam+-+Kadalundi+Rd,+Kadalundi,+Kerala+673302/@11.1375175,75.8215147,17z/data=!3m1!4b1!4m10!1m2!2m1!1sPriya+Infra+Engineers+Pvt+Ltd+Dev+Arcade,+Near+Kadalundi+Railway+Gate,+Kadalundi,+Calicut,+Kerala+%E2%80%93+673+302!3m6!1s0x3ba65120929522d7:0xeadbb043bd26cf73!8m2!3d11.1375175!4d75.8263856!15sCm1Qcml5YSBJbmZyYSBFbmdpbmVlcnMgUHZ0IEx0ZCBEZXYgQXJjYWRlLCBOZWFyIEthZGFsdW5kaSBSYWlsd2F5IEdhdGUsIEthZGFsdW5kaSwgQ2FsaWN1dCwgS2VyYWxhIOKAkyA2NzMgMzAykgERY29tcG91bmRfYnVpbGRpbmfgAQA!16s%2Fg%2F1hjgwz_lr?entry=ttu",
+    "Location2": "https://www.google.com/maps/place/Mahavir+Icon,+Sector+15,+CBD+Belapur,+Navi+Mumbai,+Maharashtra+400614/@19.0104657,73.0333777,17z/data=!3m1!4b1!4m10!1m2!2m1!1sPriya+Infra+Engineers+Pvt+Ltd+Mahavir+Icon,+Plot-89,+801B,+Sector+15,+Cbd+belapur,+Navi+Mumbai,+Maharashtra-400614!3m6!1s0x3be7c3aa58401201:0xf0f9308bd73291f3!8m2!3d19.0105187!4d73.0382218!15sCnJQcml5YSBJbmZyYSBFbmdpbmVlcnMgUHZ0IEx0ZCBNYWhhdmlyIEljb24sIFBsb3QtODksIDgwMUIsIFNlY3RvciAxNSwgQ2JkIGJlbGFwdXIsIE5hdmkgTXVtYmFpLCBNYWhhcmFzaHRyYS00MDA2MTSSARBjb21wb3VuZF9ncm91bmRz4AEA!16s%2Fg%2F11cknf1pgl?entry=ttu",
+    "Location3": "https://www.google.com/maps/search/?api=1&query=28.6300457,77.3789267",
+    "Address1": "Devarcade Building, Near Kadalundi Railway Gate, Kadalundi (PO), Calicut District, Kerala 673302",
+    "Address2": "Teknow Infra Engineers Pvt Ltd, 198, 199,200 Raghuleela Mall, Plot No. 34/35/36, Sector - 30A, Vashi, Navi Mumbai, Thane, Maharashtra – 400703",
+    "Address3": "H-15, Rise Tower, BSI Building, 202, 2nd Floor, Sector - 63, Noida, UP - 201301.",
+    "CompanyLink": "/company"
+  },
+  {
+    "page": "Admin",
+    "id": "1",
+    "AdminProjectsEdit": "adminprojects",
+    "AdminProjects": [
+      {
+        "fields": "title"
+      },
+      {
+        "fields": "id"
+      },
+      {
+        "fields": "services"
+      },
+      {
+        "fields": "client"
+      },
+      {
+        "fields": "location"
+      },
+      {
+        "fields": "description"
+      },
+      {
+        "fields": "image"
+      },
+      {
+        "fields": "ProjectsDescription"
+      },
+      {
+        "fields": "Projectsimage"
+      },
+      {
+        "fields": "Projectstitle"
+      },
+      {
+        "fields": "ProjectsAboutimage"
+      },
+      {
+        "fields": "ProjectsAboutimage2"
+      },
+      {
+        "fields": "ProjectsAboutTitle"
+      },
+      {
+        "fields": "ProjectsAboutPara"
+      },
+      {
+        "fields": "photo",
+        "subfields": [
+          {
+            "fields": "image"
+          }
+        ]
+      }
+    ],
+    "AdminServices": [
+      {
+        "fields": "title"
+      },
+      {
+        "fields": "id"
+      },
+      {
+        "fields": "projects"
+      },
+      {
+        "fields": "description"
+      },
+      {
+        "fields": "image"
+      },
+      {
+        "fields": "CardListCount"
+      },
+      {
+        "fields": "CardListCount2"
+      },
+      {
+        "fields": "CardListPara"
+      },
+      {
+        "fields": "CardListPara2"
+      },
+      {
+        "fields": "CardListLinkPara"
+      },
+      {
+        "fields": "CardIntroDescription"
+      },
+      {
+        "fields": "CardIntroimage"
+      },
+      {
+        "fields": "CardIntrotitle"
+      },
+      {
+        "fields": "CardIntroAboutimage"
+      },
+      {
+        "fields": "CardIntroAboutimage2"
+      },
+      {
+        "fields": "CardIntroAboutTitle"
+      },
+      {
+        "fields": "CardIntroAboutPara"
+      },
+      {
+        "fields": "photo",
+        "subfields": [
+          {
+            "fields": "image"
+          }
+        ]
+      }
+    ],
+    "AdminHiring": [
+      {
+        "fields": "position"
+      },
+      {
+        "fields": "Experience"
+      },
+      {
+        "fields": "Openings"
+      },
+      {
+        "fields": "Qualification"
+      },
+      {
+        "fields": "Location"
+      },
+      {
+        "fields": "details"
+      }
+    ],
+    "AdminSubmission": [
+      {
+        "fields": "name"
+      },
+      {
+        "fields": "email"
+      },
+      {
+        "fields": "message"
+      },
+      {
+        "fields": "phone"
+      },
+      {
+        "fields": "createdAt"
+      },
+      {
+        "fields": "country"
+      },
+      {
+        "fields": "countryCode"
+      },
+      {
+        "fields": "site"
+      }
+    ],
+    "AdminAuthLink": "/login",
+    "AdminPanel": [
+      {
+        "PanelLink": "/AdminProjects",
+        "PanelTitle": "Projects",
+        "PanelDetails": "Details about Projects"
+      },
+      {
+        "PanelLink": "/AdminServices",
+        "PanelTitle": "Services",
+        "PanelDetails": "Details about Projects"
+      },
+      {
+        "PanelLink": "/AdminHiring",
+        "PanelTitle": "Hiring",
+        "PanelDetails": "Details about Projects"
+      },
+      {
+        "PanelLink": "/AdminSubmission",
+        "PanelTitle": "Submission",
+        "PanelDetails": "Details about Projects"
+      }
+    ],
+    "AdminProductListTitle": "Product List",
+    "AdminProductListButton": "Create New Product",
+    "AdminProductListLink": "/AddProjectsPage",
+    "AdminServiceListTitle": "Services List",
+    "AdminServiceListButton": "Create New Services",
+    "AdminServiceListLink": "/AddServicesPage",
+    "AdminBlogListTitle": "Blog List",
+    "AdminBlogListButton": "Create New Blog",
+    "AdminBlogListLink": "/AddBlogPage",
+    "AdminSubmissionListTitle": "Submission List",
+    "AdminTestimonialListTitle": "Testimonial List",
+    "AdminTestimonialListButton": "Create New Testimonial",
+    "AdminTestimonialListLink": "/AddTestimonialsPage",
+    "AdminHiringListTitle": "Hiring List",
+    "AdminHiringListButton": "Create New Hiring",
+    "AdminHiringListLink": "/AddHiringPage"
+  }
+]

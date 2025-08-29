@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --primary-color: hsla(128, 83%, 24%, 0.815); /*    var(--primary-color)    */
+    --primary-gradient: linear-gradient(180deg, rgba(2,0,36,1) 0%, #00982e 21%, #0ab33d 100%); /*    var(--primary-gradient)    */
+    --white: #fff;/*    var(--white)  */
+    --black: #000;/*    var(--black)  */
+    --heading: #000;/*    var(--heading)    */
+    --Hover-button: hsl(138, 92%, 32%);/*    var(--Hover-button)  */
+    --light-black: #333;/*    var(--light-black)   */
+    --white-light: #ccc;/*    var(--white-light)    */
+    --white-hover: #666;   /*    var(--white-hover)   */
+    --button-background: #12233d; /*    var(--button-background)   */
+  }
+  

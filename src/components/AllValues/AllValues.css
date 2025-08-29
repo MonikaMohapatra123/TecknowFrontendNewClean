@@ -1,0 +1,123 @@
+.value-container {
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  margin-top: 5rem;
+}
+
+.value-left {
+  flex: 1; /* Each side takes up 50% width */
+  width: 50%; /* Limit the maximum width to 50% */
+  display: flex; /* Enable flexbox for left side */
+  flex-direction: column; /* Arrange items vertically */
+  align-items: left; /* Center items horizontally */
+  justify-content: flex-start; /* Align items at the top */
+  text-align: left; /* Center text horizontally */
+  padding: 8rem;
+}
+
+.value-title {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: left;
+
+}
+
+.value-description {
+  text-align: left; /* Center the description */
+  font-size: 16px;
+  font-weight: 200;
+}
+
+/* Styles for the right side container */
+.value-right {
+  flex: 1; /* Each side takes up 50% width */
+  max-width: 50%; /* Limit the maximum width to 50% */
+  padding: 30px;
+}
+
+/* Styles for the list */
+.list-value {
+  list-style: none; /* Remove default list styles */
+  padding: 0; /* Remove default padding */
+}
+
+/* Styles for list items */
+.list-value li {
+  margin-bottom: 2rem; /* Add margin between list items */
+}
+
+/* Styles for the icon */
+.iconValue {
+  font-size: 20px; /* Adjust the icon size */
+  margin-right: 10px; /* Add spacing between the icon and text */
+}
+
+
+/* Styles for the heading */
+.HeadingLeftSide {
+  font-size: 20px; /* Adjust the heading font size */
+  font-weight: 500; /* Optionally adjust the font weight */
+  margin-bottom: 1rem; /* Add spacing between the heading and paragraph */
+}
+
+/* Styles for the paragraph */
+.ParaLeftSide {
+  font-size: 14px; /* Adjust the paragraph font size */
+  color: #333; /* Change paragraph color as needed */
+  font-weight: 300; /* Optionally adjust the font weight */
+}
+
+
+
+/* Media query for screens up to 786px wide */
+@media (max-width: 786px) {
+  .value-container {
+    flex-direction: column; /* Stack items vertically */
+    margin-top: 2rem; /* Adjust margin for smaller screens */
+    padding: 0 1rem; /* Add padding to prevent content from touching edges */
+  }
+
+  .value-left,
+  .value-right {
+    width: 100%; /* Full width for each side */
+    max-width: 100%; /* Ensure full width */
+    padding: 1rem 1rem; /* Reduce padding for smaller screens */
+    text-align: left; /* Align text to the left */
+  }
+
+  .value-title {
+    font-size: 27px; /* Adjust font size */
+    margin-bottom: 1.5rem;
+  }
+
+  .value-description {
+    font-size: 14px; /* Adjust font size */
+  }
+
+  .value-right {
+    padding: 2rem 1rem; /* Reduce padding for smaller screens */
+  }
+
+  /* Styles for the list */
+  .list-value li {
+    margin-bottom: 1.5rem; /* Adjust margin between list items */
+  }
+
+  /* Styles for the icon */
+  .iconValue {
+    font-size: 18px; /* Adjust the icon size */
+    margin-right: 8px; /* Add spacing between the icon and text */
+  }
+
+  /* Styles for the heading */
+  .HeadingLeftSide {
+    font-size: 18px; /* Adjust the heading font size */
+    margin-bottom: 0.75rem; /* Adjust spacing between the heading and paragraph */
+  }
+
+  /* Styles for the paragraph */
+  .ParaLeftSide {
+    font-size: 12px; /* Adjust the paragraph font size */
+  }
+}

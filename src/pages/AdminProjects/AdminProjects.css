@@ -1,0 +1,38 @@
+.admin-products {
+    padding: 20px;
+  }
+  
+  .actions {
+    margin-bottom: 20px;
+  }
+  
+
+  
+  .list-view .product-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .grid-view {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .product-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .product-card img {
+    max-width: 100px;
+    margin-bottom: 10px;
+  }
+  
+  .product-info {
+    text-align: left;
+  }
+  

@@ -1,0 +1,210 @@
+/* Carousel.css */
+
+.directorcard-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .directorcardSlider-Heading {
+    font-size: 40px; /* Adjust the font size as needed */
+    font-weight: bold; /* Adjust the font weight as needed */
+    color: var(--black); /* Adjust the color as needed */
+    margin-bottom: 0rem; /* Adjust the margin as needed */
+    text-align: center; /* Center align text */
+    font-weight: 700;
+  }
+  
+  
+  .directorcard-container {
+    width: 1200px; /* Adjust as needed */
+    height: 560px;
+    overflow: hidden;
+    display: flex; /* Use flexbox to center contents */
+    justify-content: center;
+  }
+  
+  .directorcard-about {
+    display: flex;
+    width: 1100px; /* Adjust as needed */
+    height: 550px; /* Adjust as needed */
+    background-color: var(--white); /* Set background color to white */
+    margin: 0 auto; /* Center the card */
+    transition: transform 0.3s ease;
+  }
+  
+  .directorleft-section {
+    width: 50%; /* Make the left section take up 50% of the card */
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+  }
+  
+  .directorright-section {
+    width: 50%; /* Make the right section take up 50% of the card */
+    padding: 20px; /* Add padding for spacing */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center contents vertically */
+  }
+  
+  .directorright-section .directorcard-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .directorright-section h2 {
+    margin-top: 0; /* Remove default margin */
+  }
+  
+  .directorimg-slider {
+    max-width: 90%; /* Adjust as needed */
+    max-height: 90%; /* Adjust as needed */
+    border-radius: 20px;
+  }
+  
+  
+  .directorcard-content {
+    padding: 20px;
+    color: var(--black); /* Set text color to black */
+    text-align: center; /* Center the text horizontally */
+  }
+  
+  .directorcard-content h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin: 0; /* Remove default margin for the heading */
+    text-align: left;
+    color: var(--primary-color);
+  }
+
+  .directorParaName{
+    margin: 10px 0; /* Add margin for spacing between heading and paragraph */
+    text-align: left;
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .directorParaDetails{
+    margin: 10px 0; /* Add margin for spacing between heading and paragraph */
+    text-align: left;
+    font-weight: 300;
+    font-size: 15px;
+  }
+  
+  .directorslider-button {
+    background-color: var(--white);
+    color: var(--black);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .directorslider-button.left {
+    font-size: 30px;
+    margin-right: 10px;
+  }
+  
+  .directorslider-button.right {
+    font-size: 30px;
+    margin-left: 10px;
+  }
+  
+  .directorslider-button:hover {
+    color: var(--primary-color);
+  }
+  
+  /* Styling for dots */
+  .directordots-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; /* Adjust margin as needed */
+  }
+  
+  .directordots {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .directordash {
+    width: 50px;
+    height: 2px;
+    background-color: var(--white-light);
+    margin: 5px; /* Adjust margin to separate dashes */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 2rem;
+  }
+  
+  .directordash.active {
+    background-color: var(--primary-color);
+  }
+  
+
+
+/* Media query for responsiveness */
+@media screen and (max-width: 1080px) {
+
+  .directorcardSlider-Heading {
+    font-size: 32px; /* Adjust font size for smaller screens */
+    margin-bottom: 1rem; /* Adjust margin for smaller screens */
+  }
+  
+  .directorcard-container {
+    width: 70%; /* Adjust container width for smaller screens */
+    height: auto;
+  }
+
+  .directorcard-about {
+    width: 100%; /* Adjust card width to fit smaller screens */
+    flex-direction: column; /* Change flex direction to stack elements vertically */
+    height: auto; /* Allow height to adjust based on content */
+  }
+
+  .directorleft-section,
+  .directorright-section {
+    width: 100%; /* Make sections take up full width on smaller screens */
+  }
+
+  .directorimg-slider {
+    width: 60%; /* Adjust image width for smaller screens */
+    max-width: none; /* Remove max-width to allow image to fill container */
+    height: auto; /* Allow height to adjust based on content */
+    margin: 0 auto; /* Center image horizontally */
+    margin-top: 1rem;
+  }
+
+  .directorright-section {
+    padding: 20px 0; /* Adjust padding for spacing */
+  }
+
+  .directorcard-content {
+    text-align: center; /* Center text horizontally */
+  }
+
+  .directorcard-content p {
+    font-size: 12px;
+  }
+
+  .directorcard-content h2 {
+    font-size: 30px;
+  }
+
+  .directorslider-button.left,
+  .directorslider-button.right {
+    font-size: 24px; /* Reduce button font size for smaller screens */
+    margin: 0 5px; /* Adjust margin for spacing */
+  }
+
+  .directordash {
+    width: 20px; /* Reduce dash width for smaller screens */
+    margin: 0 2px; /* Adjust margin for spacing */
+  }
+
+  .directordots-container {
+    margin-top: 5px; /* Adjust margin for dots container */
+    margin-bottom: 10px;
+  }
+}

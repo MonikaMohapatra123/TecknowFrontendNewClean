@@ -1,0 +1,75 @@
+/* General styling for the admin panel */
+.Priyaadmin-panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #f8f9fa; /* Light gray background */
+  min-height: 100vh;
+}
+
+/* Card container styling */
+.Priyacard-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 80%; /* Limit the width */
+  padding: 10px;
+}
+
+/* Individual card styling */
+.Priyacard-box {
+  background: #ffffff; /* White background for cards */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border-radius: 8px; /* Rounded corners */
+  padding: 30px; /* Adjusted for better spacing */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover effect for cards */
+.Priyacard-box:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Title styling */
+.Priyacard-box h3.PriyaPanelTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #343a40; /* Dark gray for text */
+  margin-bottom: 10px;
+}
+
+/* Details text styling */
+.Priyacard-box p.PriyaPanelDetails {
+  font-size: 1rem;
+  color: #6c757d; /* Medium gray for text */
+  margin: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .Priyacard-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .Priyacard-box {
+    padding: 15px;
+  }
+
+  .Priyacard-box h3.PriyaPanelTitle {
+    font-size: 1.2rem;
+  }
+
+  .Priyacard-box p.PriyaPanelDetails {
+    font-size: 0.9rem;
+  }
+}

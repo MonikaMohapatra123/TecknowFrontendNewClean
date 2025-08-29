@@ -1,0 +1,297 @@
+.project-heading {
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 5rem;
+    margin-bottom: 10rem;
+  }
+  
+  .innotech {
+    color: var(--primary-color);
+  }
+  
+  
+
+
+
+.card-project {
+    width: calc(100% / 3 - 20px); /* Make the card width adaptive for three cards in one row */
+    max-width: 400px; /* Set a maximum width */
+    margin: 0 10px 20px; /* Add margin to each card */
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: auto;
+    margin-bottom: 5rem;
+  }
+  
+  
+  .card-body {
+    padding: 1.5rem; /* Use relative units for padding */
+    text-align: center; /* Center-align the content */
+  }
+  
+  .card-title {
+    font-size: 20px; /* Use relative units for font-size */
+    margin-bottom: 10px;
+    text-align: left;
+    font-weight: 600;
+  }
+
+  .card-title:hover{
+    text-decoration: underline;
+    color: var(--primary-color);
+  }
+  
+
+  
+  .card-project p {
+    margin-top: 1.8rem;
+    font-size: 14px;
+    color: var(--white-hover);
+    text-align: left;
+  }
+
+  .industry {
+    font-style: italic;
+  }
+
+  .discover-case {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    color: var(--light-black); /* Change the color as needed */
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  
+  
+  .card-deck {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center-align cards within the container */
+    gap: 30px; /* Add gap between cards */
+  }
+  
+  .btn-project {
+    margin-top: 2rem;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--button-background); /* Button background color */
+    color: var(--white); /* Button text color */
+    border: 2px solid transparent; /* Add a transparent border */
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease; /* Smooth transition */
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1); /* Button shadow */
+  }
+  
+  .btn-project:hover {
+    background-color: var(--white); /* Change background color on hover */
+    color: var(--black);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+    border-color: var(--button-background); /* Change border color on hover */
+  }
+
+  .project-image {
+    width: 100%;
+    max-width: 600px; /* Adjust the maximum width as needed */
+    height: 370px;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out; /* Add transition effect */
+    padding: 2px 2px;
+}
+
+.project-image:hover {
+    transform: scale(1.1); /* Zoom in effect on hover */
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+  }
+  
+  .page-item {
+    list-style: none;
+    margin: 0 0.5rem;
+  }
+  
+  .page-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--button-background);
+    background-color: var(--white);
+    border: 1px solid var(--button-background);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .page-link:hover {
+    background-color: var(--button-background);
+    color: var(--white);
+  }
+  
+  .page-item.active .page-link {
+    background-color: var(--button-background);
+    color: var(--white);
+  }
+
+  .case-studies-heading {
+    display: flex; /* Use flexbox */
+    align-items: center; /* Vertically center items */
+    margin-bottom: 7rem;
+    margin-top: 7rem;
+  }
+
+  .HeaderProjectCase{
+    font-size: 30px;
+    font-weight: 400;
+    padding: 20px;
+    margin-left: 3rem;
+
+  }
+  
+  /* CSS for the search bar */
+  .search-bar {
+    position: relative;
+    width: 40%; /* Adjust width as needed */
+    display: flex; /* Use flexbox */
+    justify-content: flex-end; /* Align content to the end (right) */
+    margin-left: auto; /* Align to the right */
+    margin-right: 3rem;
+  }
+
+  .search-input {
+    width: 100%;
+    padding: 10px 40px 10px 10px;
+    border-radius: 30px;
+    border: 2.5px solid var(--primary-color);
+    outline: none;
+    font-size: 14px;
+    padding:20px;
+  }
+  
+  .search-button {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .search-icon {
+    width: 20px;
+    height: 20px;
+    fill: #666;
+    transition: fill 0.3s ease;
+  }
+  
+  .search-button:hover .search-icon {
+    fill: var(--light-black);
+  }
+
+  .discover-case:hover{
+    text-decoration: underline;
+    color: var(--primary-color);
+  }
+  
+  
+
+  
+ /* CSS for screens up to 1080px width */
+@media (max-width: 1080px) {
+    .project-heading {
+      font-size: 3rem;
+      margin-top: 3rem; /* Adjust margin for smaller screens */
+      margin-bottom: 7rem; /* Adjust margin for smaller screens */
+    }
+  
+    .card-project {
+      width: calc(50% - 20px); /* Two cards in one row for smaller screens */
+      max-width: 350px; /* Adjust maximum width for smaller screens */
+      margin-bottom: 3rem; /* Adjust margin for smaller screens */
+    }
+  
+    .card-title {
+      font-size: 24px; /* Adjust font size for smaller screens */
+    }
+  
+    .card-project p {
+      font-size: 12px; /* Adjust font size for smaller screens */
+      margin-top: 1.5rem; /* Adjust margin for smaller screens */
+    }
+  
+    .discover-case {
+      margin-top: 1.5rem; /* Adjust margin for smaller screens */
+      margin-bottom: 1.5rem; /* Adjust margin for smaller screens */
+    }
+  
+    .btn-project {
+      margin-top: 1.5rem; /* Adjust margin for smaller screens */
+    }
+  }
+  
+  /* CSS for mobile devices */
+  @media (max-width: 786px) {
+    .project-heading {
+      font-size: 2.5rem;
+      margin-top: 2rem; /* Adjust margin for smaller screens */
+      margin-bottom: 5rem; /* Adjust margin for smaller screens */
+    }
+  
+    .card-project {
+      width: 100%; /* One card per row for small screens */
+      max-width: none; /* No maximum width for small screens */
+      margin-bottom: 2rem; /* Adjust margin for smaller screens */
+    }
+  
+    .card-title {
+      font-size: 20px; /* Adjust font size for smaller screens */
+    }
+  
+    .card-project p {
+      font-size: 10px; /* Adjust font size for smaller screens */
+      margin-top: 1rem; /* Adjust margin for smaller screens */
+    }
+  
+    .discover-case {
+      margin-top: 1rem; /* Adjust margin for smaller screens */
+      margin-bottom: 1rem; /* Adjust margin for smaller screens */
+    }
+  
+    .btn-project {
+      margin-top: 1rem; /* Adjust margin for smaller screens */
+    }
+
+    .pagination {
+        flex-wrap: wrap;
+      }
+    
+      .page-item {
+        margin: 0.5rem 0;
+      }
+    
+      .page-link {
+        padding: 0.3rem 0.7rem;
+        font-size: 14px;
+      }
+
+      .search-bar {
+        width: 80%; /* Set width to 50% */
+        margin: 0 auto; /* Center horizontally */
+      }
+      
+      .search-input {
+        padding: 10px; /* Adjust padding for smaller screens */
+        font-size: 12px; /* Adjust font size for smaller screens */
+      }
+      .HeaderProjectCase{
+        display: none;
+      }
+  }
+  
+  

@@ -1,0 +1,208 @@
+/* ServicesCardList.css */
+
+
+.gapServices-para {
+  font-size: 20px;
+  font-weight: 300;
+  margin: 0 auto; /* Center horizontally */
+  max-width: 800px; /* Limit width for better design */
+  padding: 30px;
+  text-align: center; /* Center text */
+  background-color: var(--black) ; /* Background color */
+  border-radius: 50px 150px 50px 150px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  margin-bottom: 3rem;
+  color: var(--white);
+}
+
+
+.CardList-container {
+  position: relative;
+  width: 100%;
+  height: 500px; /* Adjust the height as needed */
+  background-size: cover;
+  background-position: center;
+  
+}
+
+.CardList-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: inherit;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(50%);
+  z-index: 1;
+}
+
+.CardList-content {
+  position: absolute;
+  color: var(--white); /* Text color */
+  padding: 50px;
+  margin-top: 3rem;
+  z-index: 2;
+}
+
+
+.CardList-heading {
+  font-size: 45px;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.CardList-Para {
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: 300;
+}
+
+.CardList-Link {
+  color: var(--white);
+  text-decoration: none;
+
+  font-size: 14px;
+  margin-right: 10px;
+  font-weight: 300;
+}
+
+.CardList-Link:hover{
+  color: var(--primary-color); 
+    transform: translateX(5px);
+}
+
+.count-Services {
+  display: flex;
+  gap:5rem;
+  margin-top: 30px;
+}
+
+.count-wrapper {
+  text-align: center;
+}
+
+.CardList-Count,
+.CardList-CountPara {
+  margin: 0;
+}
+
+.CardList-Count {
+  font-size: 45px;
+  font-weight: bold;
+  color: var(--white); 
+  font-weight: 400;
+}
+
+.CardList-CountPara {
+  font-size: 16px;
+  color: var(--white);
+}
+
+
+
+.BlurService-Projects {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30%; /* Width of the blurred partition */
+  height: 100%;
+  backdrop-filter: blur(20px); /* Apply the blur effect */
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  border-left: 1px solid var(--black);
+  z-index: 3;
+}
+
+.project-partition {
+  text-align: left;
+  
+}
+
+.headingProjectsBlur {
+  font-size: 34px;
+  font-weight: 400;
+  margin-top: 2rem; /* Adjust margin as needed */
+  margin-bottom: 1rem;
+  color: var(--white);
+  text-align: center;
+}
+
+.project-card {
+  margin-top: 2rem;
+  color: var(--white);
+
+}
+
+.LinkProjectsServices {
+  color: var(--black); /* Adjust the color of the project title */
+  text-decoration: none;
+  font-size: 12px;
+  color: var(--white); /* Color for normal state */
+ 
+}
+
+.LinkProjectsServices:hover{
+  color: var(--primary-color); 
+    transform: translateX(5px);
+}
+
+
+.icon-ServiceCard{
+  margin-left: 10px;
+}
+
+.icon-ServiceCard:hover{
+  color: var(--primary-color); 
+    transform: translateX(5px);
+}
+
+@media only screen and (max-width: 786px) {
+  .gapServices-para {
+    max-width: 400px;
+    font-size: 16px;
+    padding: 20px;
+    border-radius: 20px 60px 20px 60px; 
+  }
+
+  .CardList-content {
+    padding: 30px;
+  }
+
+  .CardList-heading {
+    font-size: 30px;
+    margin-bottom: 8px;
+  }
+
+  .CardList-Para {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .CardList-Link {
+    font-size: 12px;
+    margin-right: 8px;
+  }
+
+  .count-Services {
+    margin-top: 20px;
+  }
+
+  .CardList-Count {
+    font-size: 35px;
+  }
+
+  .CardList-CountPara {
+    font-size: 14px;
+  }
+
+  .BlurService-Projects {
+display: none;
+  }
+
+
+}

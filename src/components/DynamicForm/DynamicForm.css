@@ -1,0 +1,144 @@
+/* Container for the form */
+.dynamic-form {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 25px;
+  background-color: #f8f9fa;
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Form title */
+.dynamic-form h2 {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 30px;
+  color: #333;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+/* Form group styling */
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 15px;
+  color: #495057;
+  letter-spacing: 0.5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ced4da;
+  transition: border-color 0.3s ease;
+  background-color: #fff;
+}
+
+/* Field focus style */
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="number"]:focus {
+  outline: none;
+}
+
+/* Button styling */
+.button-DynamicForm {
+  display: inline-block;
+  padding: 15px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.button-DynamicForm:disabled {
+  background-color: #adb5bd;
+  cursor: not-allowed;
+}
+
+.button-DynamicForm:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+/* Add and Remove buttons */
+.add-btn,
+.remove-btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 15px;
+  background-color: #17a2b8;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  font-weight: 600;
+}
+
+.remove-btn {
+  background-color: #dc3545;
+}
+
+.add-btn:hover {
+  background-color: #138496;
+}
+
+.remove-btn:hover {
+  background-color: #c82333;
+}
+
+/* Array group styling */
+.array-group {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  border: 1px solid #ced4da;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .dynamic-form {
+    padding: 20px;
+  }
+
+  .form-group label {
+    font-size: 14px;
+  }
+
+  .form-group input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .button-DynamicForm {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .add-btn, .remove-btn {
+    font-size: 12px;
+    padding: 10px;
+  }
+}

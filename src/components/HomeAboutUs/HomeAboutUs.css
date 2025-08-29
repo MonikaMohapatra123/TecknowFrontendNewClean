@@ -1,0 +1,133 @@
+.Aboutus-container {
+    width: 60%;
+    padding: 2rem;
+    box-sizing: border-box;
+    margin: 0 auto; /* This centers the container horizontally */
+}
+
+.Aboutus-Section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* Add some spacing between sections */
+}
+
+.Aboutus-section1, .Aboutus-section2 {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.Aboutus-section1Left, .Aboutus-section1Right, .Aboutus-section2Left, .Aboutus-section2Right {
+    width: 50%;
+    padding: 1rem; /* Adjust the padding as needed */
+    box-sizing: border-box;
+}
+
+.Aboutus-section1Left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Aboutus-section1Left h1 {
+    font-size: 17px;
+    color: #454545;
+    display: inline-flex;
+    align-items: center; /* Ensure icon is aligned properly */
+    gap: 0.3rem;
+}
+
+.Aboutus-section1Left h1:hover {
+    color: var(--primary-color);
+}
+
+.Aboutus-section1Left h1:hover .Aboutus-section1LeftIcon {
+    transform: translateX(5px);
+    color: var(--primary-color);
+}
+
+.Aboutus-section1Left h2 {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.Aboutus-section1Right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Aboutus-section1Right p {
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.Aboutus-section2Left {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Space between images */
+}
+
+.Aboutus-section2Right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Aboutus-section2Left img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.Aboutus-section2Right img {
+    width: 100%;
+    height: 575px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+/* Responsive styles for screens 786px and smaller */
+@media (max-width: 786px) {
+    .Aboutus-container {
+        width: 90%; /* Adjust container width */
+        padding: 1rem; /* Adjust padding */
+    }
+
+    .Aboutus-section1, .Aboutus-section2 {
+        flex-direction: column; /* Stack sections vertically */
+    }
+
+    .Aboutus-section1Left, .Aboutus-section1Right, .Aboutus-section2Left, .Aboutus-section2Right {
+        width: 100%; /* Full width for each section part */
+        padding: 0.5rem; /* Adjust padding */
+    }
+
+    .Aboutus-section2Left {
+        flex-direction: row; /* Display images in a row */
+        flex-wrap: wrap; /* Allow wrapping of images */
+        gap: 0.5rem; /* Adjust gap between images */
+    }
+
+    .Aboutus-section2Left img {
+        width: 100%; /* Adjust width of images */
+    }
+
+    .Aboutus-section2Right img {
+        width: 100%;
+        height: auto; /* Adjust height of image */
+    }
+
+    .Aboutus-section1Left h1 {
+        font-size: 15px; /* Adjust font size */
+    }
+
+    .Aboutus-section1Left h2 {
+        font-size: 25px; /* Adjust font size */
+    }
+
+    .Aboutus-section1Right p {
+        font-size: 15px; /* Adjust font size */
+    }
+}
