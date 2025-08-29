@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import "./DynamicEditForm.css";
@@ -14,9 +14,9 @@ const DynamicEditForm = ({ fields, apiUrl }) => {
   useEffect(() => {
     const fetchProductData = async () => {
       try {
-        const response = await axios.get(`${apiUrl}/${id}`); // Fetch product data from API using _id
+        const response = await axios.get(`${apiUrl}/${id}`);
         setFormData(response.data); // Prepopulate form with existing data
-        setFetching(false); // Finished fetching data
+        setFetching(false);
       } catch (error) {
         console.error('Error fetching product data:', error);
         setFetching(false);
@@ -67,8 +67,8 @@ const DynamicEditForm = ({ fields, apiUrl }) => {
     });
   };
 
-  // Handle form submission to update the product
-  const handleSubmit = async (e) => {
+  // Handle form submission to update the product (useCallback for stable reference)
+  const handleSubmit = useCallback(async (e) => {
     e.preventDefault();
     setLoading(true);
     setSuccessMessage(""); // Clear previous success message
@@ -76,19 +76,19 @@ const DynamicEditForm = ({ fields, apiUrl }) => {
     try {
       await axios.put(`${apiUrl}/${id}`, formData); // Send updated data with PUT request
       setLoading(false);
-      setSuccessMessage("Product updated successfully!"); // Display success message
+      setSuccessMessage("Product updated successfully!");
     } catch (error) {
       console.error('Error updating product:', error);
       setLoading(false);
     }
-  };
+  }, [apiUrl, id, formData]);
 
   // Add a hotkey for form submission (Ctrl + S)
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.ctrlKey && e.key === 's') {
-        e.preventDefault(); // Prevent the browser's default save action
-        handleSubmit(e); // Trigger form submission
+        e.preventDefault();
+        handleSubmit(e);
       }
     };
 
@@ -96,7 +96,7 @@ const DynamicEditForm = ({ fields, apiUrl }) => {
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [formData]); // Include formData dependency to ensure the latest data is submitted
+  }, [handleSubmit]); // ✅ include handleSubmit as dependency
 
   if (fetching) {
     return <p>Loading product data...</p>;
@@ -108,7 +108,7 @@ const DynamicEditForm = ({ fields, apiUrl }) => {
         {fields.map((fieldObj, index) => (
           <div key={index} className="form-group">
             <label>{fieldObj.fields}</label>
-            
+
             {fieldObj.subfields ? (
               <div>
                 {formData[fieldObj.fields]?.map((item, itemIndex) => (

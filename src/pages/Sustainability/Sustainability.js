@@ -9,37 +9,28 @@ import SustainabilitySection from '../../components/SustainabilitySection/Sustai
 // Lazy load components
 const AllIntroTemplate = lazy(() => import("../../components/AllIntroTemplate/AllIntroTemplate"));
 const AllAboutTemplate = lazy(() => import("../../components/AllAboutTemplate/AllAboutTemplate"));
-const AllValues = lazy(() => import("../../components/AllValues/AllValues"));
 
 function Sustainability() {
-  const [totalData, setTotalData] = useState(null); // State for TotalData
-  const [isLoading, setIsLoading] = useState(true); // Loading state
+  const [totalData, setTotalData] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // Fetch and set TotalData from local storage
         const storedData = getStoredData();
-        if (storedData) {
-          setTotalData(storedData);
-        }
+        if (storedData) setTotalData(storedData);
       } catch (error) {
         console.error('Error fetching data:', error);
       } finally {
-        setIsLoading(false); // Set loading to false after all fetches
+        setIsLoading(false);
       }
     };
 
     fetchData();
   }, []);
 
-  if (isLoading) {
-    return <LoadingIcon />; // Show the loading icon component while fetching data
-  }
-
-  if (!totalData) {
-    return <div>Error: No data available.</div>;
-  }
+  if (isLoading) return <LoadingIcon />;
+  if (!totalData) return <div>Error: No data available.</div>;
 
   const companyData = totalData[0];
 
@@ -85,9 +76,8 @@ function Sustainability() {
           title={companyData?.SustainabilityAbouttitle}
           image2={companyData?.SustainabilityAboutimage2}
         />
-        <SocialImpactSection/>
-        {/* <AllValues /> */}
-        <SustainabilitySection/>
+        <SocialImpactSection />
+        <SustainabilitySection />
       </Suspense>
     </div>
   );

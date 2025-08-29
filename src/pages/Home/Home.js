@@ -8,7 +8,6 @@ import Accordion from '../../components/Accordion/Accordion';
 
 const HomeIntroduction = lazy(() => import('../../components/HomeIntroduction/HomeIntroduction'));
 const AllHighlights = lazy(() => import('../../components/AllHighlights/AllHighlights'));
-const AllSustainability = lazy(() => import('../../components/AllSustainability/AllSustainability'));
 const AllProjects = lazy(() => import('../../components/AllProjects/AllProjects'));
 const AllContactUs = lazy(() => import('../../components/AllContactUs/AllContactUs'));
 const HomeIconSlider = lazy(() => import('../../components/HomeIconSlider/HomeIconSlider'));
@@ -24,20 +23,16 @@ function Home() {
     const fetchData = async () => {
       try {
         const storedData = getStoredData();
-        if (storedData) {
-          setTotalData(storedData);
-        }
+        if (storedData) setTotalData(storedData);
 
         // Fetch services
         const servicesResponse = await fetch('https://technow-overseasbackend.vercel.app/services');
         const servicesData = await servicesResponse.json();
-        console.log("Fetched services:", servicesData);
         setServices(Array.isArray(servicesData) ? servicesData : []);
 
         // Fetch projects
         const projectsResponse = await fetch('https://technow-overseasbackend.vercel.app/projects');
         const projectsData = await projectsResponse.json();
-        console.log("Fetched projects:", projectsData);
         setProjects(Array.isArray(projectsData) ? projectsData : []);
       } catch (error) {
         console.error('Error fetching data:', error);
@@ -49,13 +44,8 @@ function Home() {
     fetchData();
   }, []);
 
-  if (isLoading) {
-    return <LoadingIcon />;
-  }
-
-  if (!totalData) {
-    return <div>Error: No data available.</div>;
-  }
+  if (isLoading) return <LoadingIcon />;
+  if (!totalData) return <div>Error: No data available.</div>;
 
   const highlightsData = totalData.map((data) => data.highlights);
 
@@ -120,8 +110,7 @@ function Home() {
         <HomeIntroduction />
         <HomeAboutUs data={totalData[0]} />
         <AllHighlights data={highlightsData} />
-        {/* <AllSustainability data={totalData} /> */}
-        <Accordion/>
+        <Accordion />
         <AllProjects cards={projects} />
         <AllContactUs data={totalData} />
         <HomeIconSlider />

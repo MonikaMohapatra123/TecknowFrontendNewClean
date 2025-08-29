@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import './DynamicForm.css';
@@ -8,7 +8,7 @@ const DynamicForm = ({ fields, apiUrl, successRedirect }) => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  // Handle input changes for flat fields
+  // Handle input changes for simple fields
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -17,23 +17,10 @@ const DynamicForm = ({ fields, apiUrl, successRedirect }) => {
     });
   };
 
-  // Handle input changes for object subfields (like location)
-  const handleSubFieldChange = (fieldName, subField, value) => {
-    setFormData({
-      ...formData,
-      [fieldName]: {
-        ...(formData[fieldName] || {}),
-        [subField]: value,
-      },
-    });
-  };
-
   // Handle input changes for array subfields (like keyplaces, photos, amenities)
   const handleArrayChange = (fieldName, index, subField, value) => {
     const updatedArray = [...(formData[fieldName] || [])];
-    if (!updatedArray[index]) {
-      updatedArray[index] = {};
-    }
+    if (!updatedArray[index]) updatedArray[index] = {};
     updatedArray[index][subField] = value;
     setFormData({
       ...formData,
@@ -41,7 +28,7 @@ const DynamicForm = ({ fields, apiUrl, successRedirect }) => {
     });
   };
 
-  // Handle adding a new item to an array field
+  // Add a new item to an array field
   const handleAddItem = (fieldName) => {
     const updatedArray = [...(formData[fieldName] || []), {}];
     setFormData({
@@ -50,7 +37,7 @@ const DynamicForm = ({ fields, apiUrl, successRedirect }) => {
     });
   };
 
-  // Handle removing an item from an array field
+  // Remove an item from an array field
   const handleRemoveItem = (fieldName, index) => {
     const updatedArray = [...(formData[fieldName] || [])];
     updatedArray.splice(index, 1);
@@ -60,32 +47,34 @@ const DynamicForm = ({ fields, apiUrl, successRedirect }) => {
     });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
+  // Handle form submission (useCallback for stable reference)
+  const handleSubmit = useCallback(
+    async (e) => {
+      if (e) e.preventDefault();
+      setLoading(true);
 
-    try {
-      console.log(formData); // Check the formData structure before sending
-      await axios.post(apiUrl, formData, {
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      }); // Use dynamic API URL with correct headers
-      setLoading(false);
-      alert('Project created successfully!');
-      navigate(successRedirect); // Redirect to a dynamic route after success
-    } catch (error) {
-      console.error('Error creating project:', error);
-      setLoading(false);
-    }
-  };
+      try {
+        console.log(formData); // Debug formData
+        await axios.post(apiUrl, formData, {
+          headers: { 'Content-Type': 'application/json' },
+        });
+        setLoading(false);
+        alert('Project created successfully!');
+        navigate(successRedirect); // Redirect after success
+      } catch (error) {
+        console.error('Error creating project:', error);
+        setLoading(false);
+      }
+    },
+    [apiUrl, formData, navigate, successRedirect]
+  );
 
   // Add a hotkey for form submission (Ctrl + S)
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.ctrlKey && e.key === 's') {
-        e.preventDefault(); // Prevent the browser's default save action
-        handleSubmit(e); // Trigger form submission
+        e.preventDefault();
+        handleSubmit();
       }
     };
 
@@ -93,7 +82,7 @@ const DynamicForm = ({ fields, apiUrl, successRedirect }) => {
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [formData]); // Include formData dependency to ensure the latest data is submitted
+  }, [handleSubmit]); // Include handleSubmit to avoid warnings
 
   return (
     <div className="dynamic-form">
@@ -103,7 +92,6 @@ const DynamicForm = ({ fields, apiUrl, successRedirect }) => {
           <div key={index} className="form-group">
             <label>{fieldObj.fields}</label>
 
-            {/* Handle subfields for objects like location or arrays like keyplaces, photos, etc. */}
             {fieldObj.subfields ? (
               <div>
                 {formData[fieldObj.fields]?.map((item, itemIndex) => (
@@ -116,7 +104,12 @@ const DynamicForm = ({ fields, apiUrl, successRedirect }) => {
                           name={`${fieldObj.fields}-${subField.fields}`}
                           value={item[subField.fields] || ''}
                           onChange={(e) =>
-                            handleArrayChange(fieldObj.fields, itemIndex, subField.fields, e.target.value)
+                            handleArrayChange(
+                              fieldObj.fields,
+                              itemIndex,
+                              subField.fields,
+                              e.target.value
+                            )
                           }
                         />
                       </div>
@@ -139,7 +132,6 @@ const DynamicForm = ({ fields, apiUrl, successRedirect }) => {
                 </button>
               </div>
             ) : (
-              // Handle simple fields
               <input
                 type="text"
                 name={fieldObj.fields}
@@ -150,7 +142,7 @@ const DynamicForm = ({ fields, apiUrl, successRedirect }) => {
             )}
           </div>
         ))}
-        <div className='buttoneditPage'>
+        <div className="buttoneditPage">
           <button type="submit" disabled={loading}>
             {loading ? 'Creating...' : 'Create Project'}
           </button>
