@@ -44,7 +44,7 @@ const PrivateLayout = ({ children }) => (
 );
 
 const RoutesWithLayout = () => {
-  const location = useLocation();
+
   useScrollToTop();
 
   return (

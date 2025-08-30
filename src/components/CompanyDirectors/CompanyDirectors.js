@@ -74,11 +74,17 @@ const CompanyDirectors = ({ cards }) => {
         <div className="directorcard-container">
           <div className="directorcard-about active">
             <div className="directorleft-section">
-              <img
+              {/* <img
                 src={image}
                 alt={`Image of ${name}`}
                 className="directorimg-slider"
-              />
+              /> */}
+              <img
+              src={image}
+              alt={name}
+              className="directorimg-slider"
+            />
+
             </div>
             <div className="directorright-section">
               <div className="directorcard-content">
