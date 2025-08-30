@@ -29,8 +29,8 @@ function AllAboutTemplate({ title, description, image, image2 }) {
             <p className="mb-4 text-base leading-relaxed text-gray-600 dark:text-gray-600 dark:text-black">{description}</p>
           </div>
           <div className="grid grid-cols-2 gap-4 mt-8">
-            <img className="w-full rounded-lg" src={image} alt="Priya Infra Engineers Pvt Ltd - High-Quality Construction Services" />
-            <img className="mt-4 w-full lg:mt-10 rounded-lg" src={image2} alt="Priya Infra Engineers Pvt Ltd - High-Quality Construction Services" />
+            <img className="w-full rounded-lg" src={image} alt="Priya Infra Engineers Pvt Ltd - High-Quality Construction Services" loading="lazy" />
+            <img className="mt-4 w-full lg:mt-10 rounded-lg" src={image2} alt="Priya Infra Engineers Pvt Ltd - High-Quality Construction Services" loading="lazy" />
           </div>
         </div>
       </section>

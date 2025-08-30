@@ -1,62 +1,63 @@
-/* LoadingIcon.css */
 .loading-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;  /* prevent reflow */
+  overflow: hidden;   /* avoid scrollbar CLS */
+}
+
+/* Circle spinner */
+.circle-spinner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border: 5px solid #f3f3f3; /* Light gray */
+  border-top: 5px solid #000; /* Dark top border for spinning */
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+  will-change: transform; /* performance optimization */
+}
+
+/* Logo inside spinner */
+.logo {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  object-fit: contain; /* Prevents distortion */
+}
+
+/* Loading text */
+.loading-text {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #000;
+  font-family: system-ui, sans-serif; /* prevent font CLS */
+}
+
+/* Keyframe for spinning */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive design for small screens */
+@media (max-width: 786px) {
   .circle-spinner {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100px;
-    height: 100px;
-    border: 5px solid #f3f3f3; /* Light gray background color */
-    border-top: 5px solid #000; /* Dark border color for spinning effect */
-    border-radius: 50%;
-    animation: spin 2s linear infinite;
+    width: 80px;
+    height: 80px;
   }
-  
+
   .logo {
-    position: absolute;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
   }
-  
+
   .loading-text {
-    margin-top: 15px;
-    font-size: 18px;
-    color: #000;
+    margin-top: 10px;
+    font-size: 16px;
   }
-  
-  /* Keyframe for spinning animation */
-  @keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  
-  /* Media query for responsiveness at 786px screen width */
-  @media (max-width: 786px) {
-    .circle-spinner {
-      width: 80px; /* Smaller circle size */
-      height: 80px; /* Smaller circle size */
-    }
-  
-    .logo {
-      width: 30px; /* Adjust logo size for smaller circle */
-      height: 30px; /* Adjust logo size for smaller circle */
-    }
-  
-    .loading-text {
-      margin-top: 10px;
-      font-size: 16px; /* Slightly smaller text */
-    }
-  }
-  
+}

@@ -34,7 +34,7 @@ function CompanyQuotes({ data }) {
 
           <div className="Quotes-ceoSection">
             <div className='Quotes-ImageCircle'>
-            <img src={data.quotesImage} alt="Priya Infra Engineers Pvt Ltd - High-Quality Construction Services" className="quotes-Image" />
+            <img src={data.quotesImage} alt="Priya Infra Engineers Pvt Ltd - High-Quality Construction Services" loading="lazy" className="quotes-Image" />
             </div>
             <p className="Quotes-Name">{data.quotesName}</p>
             <p className="Quotes-Designation">{data.quotesDesignation}</p>

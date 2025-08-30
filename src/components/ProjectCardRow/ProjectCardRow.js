@@ -85,7 +85,7 @@ const ProjectCard = React.memo(({ project }) => {
     <div className="card-project">
       <Link to={`/projects/${project.id}`}>
         <div className="card-body">
-          <img src={project.image} alt="Priya Infra Engineers Pvt Ltd - High-Quality Construction Services" className="project-image" />
+          <img src={project.image} alt="Priya Infra Engineers Pvt Ltd - High-Quality Construction Services" className="project-image" loading="lazy"/>
           <p className="industry">{project.client}</p>
           <h1 className="card-title">{project.title}</h1>
           <p className="card-text">{project.description}</p>

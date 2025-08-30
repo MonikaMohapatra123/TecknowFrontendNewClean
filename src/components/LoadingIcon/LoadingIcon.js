@@ -5,7 +5,14 @@ const LoadingIcon = () => {
   return (
     <div className="loading-container">
       <div className="circle-spinner">
-        <img src="/PriyaLogo.webp" alt="Company Logo" className="logo" />
+        <img
+          src="/PriyaLogo.webp"
+          alt="Company Logo"
+          className="logo"
+          width="40"
+          height="40"
+          loading="lazy"
+        />
       </div>
       <div className="loading-text">Loading...</div>
     </div>

@@ -1,23 +1,31 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import './HomeIntroduction.css'; // Import the CSS file
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import './HomeIntroduction.css';
 import { getStoredData } from "../../JsonFiles/fetchData";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight, faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'; // Import the arrow icons
+import { faArrowRight, faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Link as RouterLink } from 'react-router-dom';
 
-const Link = ({ to, children, ...rest }) => {
+// ✅ Memoized Link wrapper
+const Link = React.memo(({ to, children, ...rest }) => {
   const handleClick = () => {
     window.scrollTo(0, 0);
   };
-
   return (
     <RouterLink to={to} onClick={handleClick} {...rest}>
       {children}
     </RouterLink>
   );
-};
+});
+
+// ✅ Memoized Navigation Icons
+const Navigation = React.memo(({ onPrev, onNext }) => (
+  <div className="HomeIntro-navigation">
+    <FontAwesomeIcon icon={faAngleLeft} className="HomeIntro-icon" onClick={onPrev} />
+    <FontAwesomeIcon icon={faAngleRight} className="HomeIntro-icon" onClick={onNext} />
+  </div>
+));
 
 function HomeIntroduction() {
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
@@ -25,29 +33,33 @@ function HomeIntroduction() {
   const animationControls = useAnimation();
   const [ref, inView] = useInView();
 
-  // Fetch data from getStoredData
+  // ✅ Fetch data
   useEffect(() => {
-    const fetchData = async () => {
-      const storedData = getStoredData();
-      if (storedData && storedData[0]?.HomeIntro) {
-        setHomeIntroData(storedData[0].HomeIntro);
-      } else {
-        console.error("No HomeIntro data found in local storage.");
-      }
-    };
-
-    fetchData();
+    const storedData = getStoredData();
+    if (storedData && storedData[0]?.HomeIntro) {
+      setHomeIntroData(storedData[0].HomeIntro);
+    } else {
+      console.error("No HomeIntro data found in local storage.");
+    }
   }, []);
 
-  // Function to go to the next card
+  // ✅ Preload images for smoother transitions
+  useEffect(() => {
+    homeIntroData.forEach(item => {
+      const img = new Image();
+      img.src = item.HomeIntroImage;
+    });
+  }, [homeIntroData]);
+
+  // ✅ Next/Prev card
   const nextCard = useCallback((increment) => {
-    setCurrentCardIndex((prevIndex) => {
+    setCurrentCardIndex(prevIndex => {
       const totalCards = homeIntroData.length;
       return totalCards > 0 ? (prevIndex + increment + totalCards) % totalCards : 0;
     });
   }, [homeIntroData.length]);
 
-  // Animate when the element comes into view
+  // ✅ Animate when in view
   useEffect(() => {
     if (inView) {
       animationControls.start({
@@ -58,21 +70,17 @@ function HomeIntroduction() {
     }
   }, [animationControls, inView]);
 
-  // Automatically change the home content every 10 seconds
+  // ✅ Auto-change every 10s
   useEffect(() => {
     const timer = setInterval(() => {
-      nextCard(1); // Go to the next card
-    }, 10000); // Change content every 10 seconds
-
-    return () => clearInterval(timer); // Clean up the timer
+      nextCard(1);
+    }, 10000);
+    return () => clearInterval(timer);
   }, [nextCard]);
 
-  // Get the current card
   const card = homeIntroData[currentCardIndex];
 
-  if (!card) {
-    return <div>Loading...</div>;
-  }
+  if (!card) return <div>Loading...</div>;
 
   return (
     <div className="HomeIntro-container">
@@ -82,17 +90,21 @@ function HomeIntroduction() {
         initial={{ opacity: 0, y: 60 }}
         animate={animationControls}
       >
-        <div className="HomeIntro-card" style={{ backgroundImage: `url(${card.HomeIntroImage})` }}>
+        <div
+          className={`HomeIntro-card loaded`} // ✅ "loaded" avoids flicker
+          style={{ backgroundImage: `url(${card.HomeIntroImage})` }}
+        >
           <div className="HomeIntro-content">
-            <h2 className="HomeIntro-heading">{card.HomeIntroHeading}<span className="underscore">_</span></h2>
+            <h2 className="HomeIntro-heading">
+              {card.HomeIntroHeading}
+              <span className="underscore">_</span>
+            </h2>
             <p className="HomeIntro-paragraph">{card.HomeIntroPara}</p>
             <Link to={card.HomeIntroLink} className="HomeIntro-link">
-              {card.HomeIntroRedirect}<FontAwesomeIcon icon={faArrowRight} className="HomeIntro-iconRedirect" />
+              {card.HomeIntroRedirect}
+              <FontAwesomeIcon icon={faArrowRight} className="HomeIntro-iconRedirect" />
             </Link>
-            <div className="HomeIntro-navigation">
-              <FontAwesomeIcon icon={faAngleLeft} className="HomeIntro-icon" onClick={() => nextCard(-1)} />
-              <FontAwesomeIcon icon={faAngleRight} className="HomeIntro-icon" onClick={() => nextCard(1)} />
-            </div>
+            <Navigation onPrev={() => nextCard(-1)} onNext={() => nextCard(1)} />
           </div>
         </div>
       </motion.div>
@@ -100,4 +112,4 @@ function HomeIntroduction() {
   );
 }
 
-export default HomeIntroduction;
+export default React.memo(HomeIntroduction);

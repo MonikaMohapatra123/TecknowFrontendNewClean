@@ -32,7 +32,7 @@ function OfficeImages({ image }) {
           {image && image.length > 0 && image[activeIndex] ? (
             <img
               src={image[activeIndex].image}
-              alt="Priya Infra Engineers Pvt Ltd - High-Quality Construction Services"
+              alt="Priya Infra Engineers Pvt Ltd - High-Quality Construction Services" loading="lazy"
             />
           ) : (
             <p>No image available</p>

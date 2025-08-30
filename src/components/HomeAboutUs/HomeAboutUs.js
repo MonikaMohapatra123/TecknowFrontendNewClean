@@ -60,11 +60,11 @@ const HomeAboutUs = ({ data }) => {
         </div>
         <div className='Aboutus-section2'>
           <div className='Aboutus-section2Left'>
-            <img src={data.AboutUsPhoto1} alt="Priya Infra Engineers Pvt Ltd - High-Quality Construction Services" />
-            <img src={data.AboutUsPhoto3} alt="Priya Infra Engineers Pvt Ltd - High-Quality Construction Services" />
+            <img src={data.AboutUsPhoto1} alt="Priya Infra Engineers Pvt Ltd - High-Quality Construction Services" loading="lazy"/>
+            <img src={data.AboutUsPhoto3} alt="Priya Infra Engineers Pvt Ltd - High-Quality Construction Services" loading="lazy" />
           </div>
           <div className='Aboutus-section2Right'>
-            <img src={data.AboutUsPhoto2} alt="Priya Infra Engineers Pvt Ltd - High-Quality Construction Services" />
+            <img src={data.AboutUsPhoto2} alt="Priya Infra Engineers Pvt Ltd - High-Quality Construction Services" loading="lazy" />
           </div>
         </div>
       </div>

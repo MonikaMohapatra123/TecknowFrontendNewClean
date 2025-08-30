@@ -35,7 +35,7 @@ const AllPhotoSlider = ({ data }) => {
                 key={index}
                 src={photo.image}
                 alt={`Product ${index + 1}`}
-                className="photoimg-slider"
+                className="photoimg-slider" loading="lazy"
               />
             ))}
           </div>

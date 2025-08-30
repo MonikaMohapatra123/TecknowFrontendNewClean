@@ -30,7 +30,7 @@ function AllMapOffice({ data,title }) {
         animate={animationControls}
       >
         <h1 className='headingMap'>{title}</h1>
-        <img src={data} alt="Priya Infra Engineers Pvt Ltd - High-Quality Construction Services" className="map-image" />
+        <img src={data} alt="Priya Infra Engineers Pvt Ltd - High-Quality Construction Services" className="map-image" loading="lazy" />
       </motion.div>
       
     </div>

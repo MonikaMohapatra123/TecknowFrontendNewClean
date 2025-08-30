@@ -18,7 +18,7 @@ function NotFound() {
     <div className="display">
         <h1 className="display-notfound">404 Not found</h1>;
       <div className="display__img">
-        <img src={require("../../Assets/Scarecrow.webp")} alt="404-Priya Infra Engineers Pvt Ltd - High-Quality Construction Services" />
+        <img src={require("../../Assets/Scarecrow.webp")} alt="404-Priya Infra Engineers Pvt Ltd - High-Quality Construction Services" loading="lazy" />
       </div>
       <div className="display__content">
         <h2 className="display__content--info">I have bad news for you</h2>

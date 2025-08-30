@@ -82,7 +82,7 @@ const CompanyDirectors = ({ cards }) => {
               <img
               src={image}
               alt={name}
-              className="directorimg-slider"
+              className="directorimg-slider" loading="lazy"
             />
 
             </div>

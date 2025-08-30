@@ -82,7 +82,7 @@ const ProductList = ({ products, fields, redirect, deleteApi, showEdit = true, s
                     <img
                       src={product[field.fields]}
                       alt={product.title}
-                      style={{ maxWidth: '50px' }}
+                      style={{ maxWidth: '50px' }} loading="lazy"
                     />
                   ) : (
                     renderField(product[field.fields])

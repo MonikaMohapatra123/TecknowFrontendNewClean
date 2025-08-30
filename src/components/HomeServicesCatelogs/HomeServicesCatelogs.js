@@ -62,7 +62,7 @@ function HomeServicesCatelogs({ data, details }) {
         {data.map((item) => (
           <div key={item.id} className="cardservices-container">
             <Link to={`/services/${item.id}`}>
-              <img src={item.image} alt="Priya Infra Engineers Pvt Ltd - High-Quality Construction Services" className='cardservices-image'/>
+              <img src={item.image} alt="Priya Infra Engineers Pvt Ltd - High-Quality Construction Services" className='cardservices-image' loading="lazy"/>
               <h1 className='cardservices-title'>{item.title}</h1>
               <div className="cardservices-overlay">
                 <p className='cardservices-description'>{item.description}</p>

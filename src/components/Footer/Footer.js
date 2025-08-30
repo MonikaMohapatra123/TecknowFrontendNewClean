@@ -128,7 +128,7 @@ const Footer = () => {
             <img
               src={totalData.ImagesLogo}
               alt="Priya Infra Engineers Pvt Ltd - High-Quality Construction Services"
-              className="footer-logo"
+              className="footer-logo"  loading="lazy"
             />
             <h2>
               <a href={totalData.CompanyLink} target="_blank" rel="noopener noreferrer">

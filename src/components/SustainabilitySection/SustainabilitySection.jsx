@@ -5,7 +5,7 @@ const SustainabilitySection = () => {
   return (
     <div className="sustainability-container">
       <div className="sustainability-image">
-        <img src="/0.jpg" alt="Sustainability at Teknow" />
+        <img src="/0.jpg" alt="Sustainability at Teknow"  loading="lazy"/>
       </div>
       <div className="sustainability-content">
         <h2>Building a Greener Tomorrow</h2>

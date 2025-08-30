@@ -39,7 +39,7 @@ function SustainabilityServiceCatelogs({ data }) {
         {data.map((item) => (
           <div key={item.id} className="cardservices-container">
             
-              <img src={item.image} alt="Priya Infra Engineers Pvt Ltd - High-Quality Construction Services" className='Sustaincardservices-image'/>
+              <img src={item.image} alt="Priya Infra Engineers Pvt Ltd - High-Quality Construction Services" className='Sustaincardservices-image' loading="lazy"/>
               <h3 className='Sustaincardservices-title'>{item.title}</h3>
               <div className="cardservices-overlay">
                 <p className='Sustaincardservices-description'>{item.description}</p>

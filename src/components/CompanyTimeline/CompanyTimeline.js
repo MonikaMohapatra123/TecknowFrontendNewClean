@@ -67,7 +67,7 @@ const CompanyTimeline = ({ cards }) => {
               </div>
             </div>
             <div className="Timelineleft-section">
-              <img src={cards[currentIndex].image} alt="Priya Infra Engineers Pvt Ltd - High-Quality Construction Services" className='Timelineimg-slider' />
+              <img src={cards[currentIndex].image} alt="Priya Infra Engineers Pvt Ltd - High-Quality Construction Services" className='Timelineimg-slider'  loading="lazy"/>
             </div>
           </div>
         </div>

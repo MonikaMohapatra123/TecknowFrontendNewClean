@@ -67,7 +67,7 @@ const NavBar = () => {
               <img
                 src="/logo.png"
                 alt="logo"
-                className="w-16 lg:w-20 xl:w-24"
+                className="w-16 lg:w-20 xl:w-24" loading="lazy"
               />
             </LazyLoad>
           </Link>

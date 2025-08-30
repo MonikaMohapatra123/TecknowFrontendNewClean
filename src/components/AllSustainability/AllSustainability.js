@@ -47,7 +47,7 @@ function AllSustainability({data}) {
         <div className='conatin-sustainability'>
       <div className='left-sustainability'>
   <div className='image-containsustain'>
-    <img src={data[0].sustainabilityimage} alt="Priya Infra Engineers Pvt Ltd - High-Quality Construction Services" className='img-sustainability'></img>
+    <img src={data[0].sustainabilityimage} alt="Priya Infra Engineers Pvt Ltd - High-Quality Construction Services" className='img-sustainability' loading="lazy"></img>
   </div>
 </div>
         <div className='right-sustainability'>

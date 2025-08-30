@@ -17,34 +17,46 @@
   text-align: left;
 }
 
-/* Slider container */
+/* Container */
 .slider-container {
-  position: relative;
   overflow: hidden;
+  position: relative;
 }
 
-/* Row Wrapper */
-.slider-row {
+/* Track */
+.slider-track {
   display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-  gap: 20px; /* 👈 space between logos */
+  gap: 20px;
+  width: max-content;
+  animation: scroll-left 40s linear infinite;
+  will-change: transform;
 }
 
-/* Each logo */
-.slider-row img {
-  flex: 0 0 calc((100% - (20px * 5)) / 6);
-  /* 👆 exactly 6 logos per row (5 gaps of 20px) */
-  max-width: 100px;   /* 👈 logo size */
+.slider-track.reverse {
+  animation: scroll-right 40s linear infinite;
+}
+
+/* Each Logo */
+.slider-track img {
+  width: 100px;     /* fixed size prevents CLS */
   height: auto;
   object-fit: contain;
   transition: transform 0.3s ease-in-out;
-  filter: none; /* 👈 keeps original color */
 }
 
-/* Hover effect */
-.slider-row img:hover {
+.slider-track img:hover {
   transform: scale(1.1);
+}
+
+/* Scroll Animations */
+@keyframes scroll-left {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes scroll-right {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
 }
 
 /* Edge fade */
@@ -56,6 +68,7 @@
   width: 80px;
   height: 100%;
   z-index: 10;
+  pointer-events: none;
 }
 
 .slider-container::before {
