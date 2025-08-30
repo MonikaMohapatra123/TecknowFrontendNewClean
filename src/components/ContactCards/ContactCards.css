@@ -1,8 +1,11 @@
 .contact-section {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;   /* allows wrapping on smaller screens */
   gap: 30px;
   margin: 40px 0;
+  padding: 0 20px;   /* small padding for mobile */
 }
 
 .contact-card {
@@ -14,6 +17,8 @@
   border-radius: 6px;
   width: 320px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1 1 280px;   /* flexible width with min */
+  max-width: 350px;
 }
 
 .contact-card:hover {
@@ -44,4 +49,19 @@
   margin: 2px 0 0;
   font-size: 14px;
   color: #ffffff;
+}
+
+/* 📱 Small screens */
+@media (max-width: 768px) {
+  .contact-section {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+  }
+
+  .contact-card {
+    width: 100%;
+    max-width: 100%;
+    justify-content: flex-start;
+  }
 }
