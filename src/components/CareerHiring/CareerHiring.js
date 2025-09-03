@@ -1,16 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import './CareerHiring.css'; // Import the CSS file
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronLeft, faChevronRight, faUser } from '@fortawesome/free-solid-svg-icons';
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { Link as RouterLink } from 'react-router-dom';
+import React, { useState, useRef, useEffect } from "react";
+import "./CareerHiring.css";
+import { Link as RouterLink } from "react-router-dom";
 
 const Link = ({ to, children, ...rest }) => {
   const handleClick = () => {
     window.scrollTo(0, 0);
   };
-
   return (
     <RouterLink to={to} onClick={handleClick} {...rest}>
       {children}
@@ -19,78 +14,81 @@ const Link = ({ to, children, ...rest }) => {
 };
 
 const CareerHiring = ({ cards }) => {
-  const [currentCardIndex, setCurrentCardIndex] = useState(0); // Track the current job opening index
-  const animationControls = useAnimation();
-  const [ref, inView] = useInView();
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [barTop, setBarTop] = useState(0);
+  const [barHeight, setBarHeight] = useState(0);
+  const itemsRef = useRef([]);
 
-  // Animate when the element comes into view
   useEffect(() => {
-    if (inView) {
-      animationControls.start({
-        opacity: 1,
-        y: 0,
-        transition: { duration: 1 },
-      });
+    if (itemsRef.current[selectedIndex]) {
+      const el = itemsRef.current[selectedIndex];
+      setBarTop(el.offsetTop);
+      setBarHeight(el.offsetHeight);
     }
-  }, [animationControls, inView]);
-
-  const goToPrevCard = () => {
-    setCurrentCardIndex((prevIndex) => (prevIndex === 0 ? cards.length - 1 : prevIndex - 1));
-  };
-
-  const goToNextCard = () => {
-    setCurrentCardIndex((prevIndex) => (prevIndex === cards.length - 1 ? 0 : prevIndex + 1));
-  };
+  }, [selectedIndex]);
 
   return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 60 }}
-      animate={animationControls}
-    >
-      <h1 className="HiringcardSlider-Heading">CURRENT OPENINGS</h1>
-
-      <div className="Hiringcard-slider">
-        <button className="Hiringslider-button left" aria-label="Previous slide" onClick={goToPrevCard}>
-          <FontAwesomeIcon icon={faChevronLeft} />
-        </button>
-        <div className="Hiringcard-container">
-          <div className="Hiringcard-about active">
-            <div className="Hiringright-section">
-              <div className="Hiringcard-content">
-                <h2>{cards[currentCardIndex].position}</h2>
-                <p className="HiringParaExperience">Experience: {cards[currentCardIndex].Experience}</p>
-                <p className="HiringParaOpenings">Openings: {cards[currentCardIndex].Openings}</p>
-                <p className="HiringParaQualification">Qualification: {cards[currentCardIndex].Qualification}</p>
-                <p className="HiringParaLocation">Location: {cards[currentCardIndex].Location}</p>
-                <p className="HiringParaDetails">{cards[currentCardIndex].details}</p>
-                <Link to="/contact">
-                  <button className="contactus-Button">
-                    Apply Now
-                    <FontAwesomeIcon icon={faUser} className="icon-ContactUs" />
-                  </button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-        <button className="Hiringslider-button right" aria-label="Next slide" onClick={goToNextCard}>
-          <FontAwesomeIcon icon={faChevronRight} />
-        </button>
+    <div className="career-container">
+      <div className="career-heading">
+        <h1>Join our team for a successful career.</h1>
+        <p>
+          We are hiring for RCC Chimney / FGD / Tall Structure projects. <br />
+          Project location – PAN India
+        </p>
       </div>
 
-      <div className="Hiringdots-container">
-        <div className="Hiringdots">
-          {cards.map((_, index) => (
-            <span
+      <div className="career-layout">
+        {/* Left side job list */}
+        <div className="career-left">
+          {cards.map((card, index) => (
+            <div
               key={index}
-              className={index === currentCardIndex ? 'Hiringdash active' : 'Hiringdash'}
-              onClick={() => setCurrentCardIndex(index)}
-            />
+              ref={(el) => (itemsRef.current[index] = el)}
+              className={`career-position ${
+                selectedIndex === index ? "active" : ""
+              }`}
+              onClick={() => setSelectedIndex(index)}
+            >
+              {card.position}
+            </div>
           ))}
         </div>
+
+        {/* Vertical divider with blue marker */}
+        <div className="career-divider">
+          <div
+            className="career-scrollbar"
+            style={{
+              top: barTop,
+              height: barHeight,
+            }}
+          ></div>
+        </div>
+
+        {/* Right side job details */}
+        <div className="career-right">
+          <ul>
+            <li>
+              <strong>Position:</strong> {cards[selectedIndex].position}
+            </li>
+            <li>
+              <strong>No. of Positions:</strong> {cards[selectedIndex].Openings}
+            </li>
+            <li>
+              <strong>Place of Work:</strong> {cards[selectedIndex].Location}
+            </li>
+            <li>
+              <strong>CTC:</strong> {cards[selectedIndex].CTC}
+            </li>
+          </ul>
+          <p className="career-details">{cards[selectedIndex].details}</p>
+
+          <Link to="/contact">
+            <button className="apply-btn">Apply Now</button>
+          </Link>
+        </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
