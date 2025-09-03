@@ -29,34 +29,19 @@ const logos = [
 ];
 
 const HomeIconSlider = () => {
+  // Duplicate logos to create continuous loop
+  const doubledLogos = logos.concat(logos);
+
   return (
     <div className="slider-section">
       <h2 className="slider-title">Satisfied Customers</h2>
 
       <div className="slider-container">
-        {/* Top Row */}
-        <div className="slider-track">
-          {logos.concat(logos).map((logo, i) => (
-            <img
-              key={`top-${i}`}
-              src={logo}
-              alt={`Client ${i}`}
-              className="icon"
-              loading="lazy"
-            />
-          ))}
-        </div>
-
-        {/* Bottom Row */}
-        <div className="slider-track reverse">
-          {logos.concat(logos).map((logo, i) => (
-            <img
-              key={`bottom-${i}`}
-              src={logo}
-              alt={`Client ${i}`}
-              className="icon"
-              loading="lazy"
-            />
+        <div className="slider-grid">
+          {doubledLogos.map((logo, i) => (
+            <div key={i} className="logo-box">
+              <img src={logo} alt={`Client ${i}`} loading="lazy" />
+            </div>
           ))}
         </div>
       </div>

@@ -7,7 +7,6 @@ import ContactCards from '../../components/ContactCards/ContactCards';
 
 // Lazy load components
 const AllIntroTemplate = lazy(() => import('../../components/AllIntroTemplate/AllIntroTemplate'));
-const CareersJobs = lazy(() => import('../../components/CareersJobs/CareersJobs'));
 const ContactMap = lazy(() => import('../../components/ContactMap/ContactMap'));
 
 function Contact() {
@@ -84,7 +83,7 @@ function Contact() {
         />
          <ContactCards/>
         <ContactMap data={companyData.ContactMap} />
-        <CareersJobs />
+       
       </Suspense>
     </div>
   );

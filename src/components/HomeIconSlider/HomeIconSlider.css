@@ -1,4 +1,4 @@
-/* Whole Section */
+/* Section */
 .slider-section {
   width: 90%;
   margin: 0 auto;
@@ -10,7 +10,7 @@
 
 /* Title */
 .slider-title {
-  font-size: 28px;
+  font-size: 38px;
   font-weight: 700;
   color: #0b0c20;
   margin-bottom: 30px;
@@ -23,43 +23,41 @@
   position: relative;
 }
 
-/* Track */
-.slider-track {
-  display: flex;
-  gap: 20px;
-  width: max-content;
-  animation: scroll-left 40s linear infinite;
+/* Grid with 2 rows */
+.slider-grid {
+  display: grid;
+  grid-template-rows: repeat(2, auto);    /* 2 rows */
+  grid-auto-flow: column;                 /* fill columns first */
+  grid-auto-columns: calc(100% / 6);      /* 6 columns visible */
+  gap: 40px 60px;                         /* row-gap | column-gap */
+  animation: scroll-left 30s linear infinite;
   will-change: transform;
 }
 
-.slider-track.reverse {
-  animation: scroll-right 40s linear infinite;
+.logo-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Each Logo */
-.slider-track img {
-  width: 100px;     /* fixed size prevents CLS */
+.logo-box img {
+  width: 100px;
   height: auto;
   object-fit: contain;
   transition: transform 0.3s ease-in-out;
 }
 
-.slider-track img:hover {
+.logo-box img:hover {
   transform: scale(1.1);
 }
 
-/* Scroll Animations */
+/* Animation */
 @keyframes scroll-left {
   from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
+  to   { transform: translateX(-50%); }  /* move half to loop */
 }
 
-@keyframes scroll-right {
-  from { transform: translateX(-50%); }
-  to   { transform: translateX(0); }
-}
-
-/* Edge fade */
+/* Fade edges */
 .slider-container::before,
 .slider-container::after {
   content: "";
