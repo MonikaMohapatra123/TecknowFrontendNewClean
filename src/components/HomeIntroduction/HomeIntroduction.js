@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import './HomeIntroduction.css';
 import { getStoredData } from "../../JsonFiles/fetchData";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
