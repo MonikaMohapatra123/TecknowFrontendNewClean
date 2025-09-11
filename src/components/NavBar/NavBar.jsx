@@ -4,7 +4,7 @@ import NavLinks from "./NavLinks";
 import LazyLoad from 'react-lazyload';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
-
+import logo from "../../Assets/logobg.jpeg";
 const Link = ({ to, children, ...rest }) => {
   const handleClick = () => {
     window.scrollTo(0, 0);
@@ -65,7 +65,7 @@ const NavBar = () => {
           <Link to="/">
             <LazyLoad height={200} offset={100} once>
               <img
-                src="/logo.png"
+                src={logo}
                 alt="logo"
                 className="w-16 lg:w-20 xl:w-24" loading="lazy"
               />
