@@ -1,3 +1,5 @@
+
+
 import React from "react";
 import "./HomeIconSlider.css";
 
@@ -28,19 +30,46 @@ const logos = [
   LogoSlider16, LogoSlider17, LogoSlider18, LogoSlider19,
 ];
 
+const testimonials = [
+  {
+    text: "… the quality of work produced by them is excellent and professional. Our company is always extremely satisfied with the work that Balance Engineering & Construction has delivered this project successful.",
+    client: "Nawarat (Cambodia) Co.,Ltd",
+    author: "Mr. Sathid Sittiphaisal"
+  },
+  {
+    text: "It was not an easy task for Rahul and his team, but I can confirm that your people had a positive one on the job.",
+    client: "Construction Australia",
+    author: ""
+  }
+];
+
 const HomeIconSlider = () => {
-  // Duplicate logos to create continuous loop
-  const doubledLogos = logos.concat(logos);
+  const doubledLogos = logos.concat(logos);         // for smooth logo loop
+  const doubledTestimonials = testimonials.concat(testimonials); // smooth testimonial loop
 
   return (
     <div className="slider-section">
       <h2 className="slider-title">Satisfied Customers</h2>
 
+      {/* Logo Slider */}
       <div className="slider-container">
         <div className="slider-grid">
           {doubledLogos.map((logo, i) => (
             <div key={i} className="logo-box">
               <img src={logo} alt={`Client ${i}`} loading="lazy" />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Testimonial Slider */}
+      <div className="testimonial-slider-container">
+        <div className="testimonial-slider">
+          {doubledTestimonials.map((item, i) => (
+            <div key={i} className="testimonial-card">
+              <div className="testimonial-text">{item.text}</div>
+              <div className="testimonial-client">{item.client}</div>
+              <div className="testimonial-author">{item.author}</div>
             </div>
           ))}
         </div>
