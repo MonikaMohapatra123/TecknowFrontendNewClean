@@ -1,9 +1,16 @@
+:root {
+  --primary1-color: #fad704;
+  --white: #fff;
+}
+
 .HomeIntro-container {
   position: relative;
   height: auto;
   margin-top: -7rem;
+
 }
 
+/* Hero Card */
 .HomeIntro-card {
   width: 100%;
   height: 1000px;
@@ -12,7 +19,7 @@
   position: relative;
   overflow: hidden;
   opacity: 0;
-  transition: opacity 0.6s ease-in-out; /* ✅ GPU-friendly fade */
+  transition: opacity 0.6s ease-in-out;
 }
 
 .HomeIntro-card.loaded {
@@ -28,31 +35,82 @@
   transition: background 0.6s ease-in-out;
 }
 
-.HomeIntro-content {
-  position: absolute;
-  top: 400px;
-  left: 30px;
-  color: var(--white);
-  z-index: 2;
+/* Overlapping Info Cards Section */
+.HomeIntro-info-cards-section {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 32px;
+  background: transparent;
+  margin-top: -220px;
+  position: relative;
+  z-index: 10;
+  padding: 0 0 48px 0;
 }
 
+.HomeIntro-info-card {
+  background: #240091;
+  color: #fff;
+
+  padding: 20px 24px 24px 15px;
+  flex: 1 1 0px;
+  max-width: 300px;
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  box-shadow: 0 8px 32px 0 rgba(23, 9, 42, 0.16);
+  min-width: 250px;
+  margin-top: 140px;
+
+}
+
+.HomeIntro-info-icon {
+  font-size: 48px;
+  color: var(--primary1-color);
+  margin-right: 12px;
+  min-width: 44px;
+  margin-top: 5px;
+}
+
+.HomeIntro-info-title {
+  font-size: 1.15rem;
+  font-weight: bold;
+  color: var(--primary1-color);
+  margin-bottom: 0.4rem;
+}
+
+.HomeIntro-info-text {
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 300;
+}
+
+/* Headline */
 .HomeIntro-heading {
   font-size: 65px;
-  margin-bottom: 10px;
-  font-weight: 500;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.05;
+  margin-bottom: 28px;
+  letter-spacing: -2px;
+  text-align: left;
+  max-width: 650px;
+  padding-left: 160px;
+
 }
 
 .underscore {
-  color: var(--primary-color);
+  color: var(--primary1-color);
 }
 
 .HomeIntro-paragraph {
   font-size: 20px;
   margin-bottom: 20px;
   font-weight: 300;
-  max-width: 600px;   /* ✅ prevent wrapping across full width */
-  min-height: 60px;   /* ✅ reserve space to avoid CLS */
+  max-width: 600px;
+  min-height: 60px;
   line-height: 1.5;
+   padding-left: 160px;
 }
 
 .HomeIntro-link {
@@ -62,40 +120,16 @@
   display: inline-block;
   position: relative;
   transition: transform 0.3s ease;
+   padding-left: 160px;
 }
 
 .HomeIntro-link:hover {
-  color: var(--primary-color);
+  color: var(--primary1-color);
   transform: translateX(5px);
 }
 
 .HomeIntro-link:hover .HomeIntro-iconRedirect {
-  color: var(--primary-color);
-}
-
-.HomeIntro-navigation {
-  position: absolute;
-  display: flex;
-  gap: 50px;
-  margin-top: 2rem;
-}
-
-.HomeIntro-icon {
-  font-size: 27px;
-  color: var(--white);
-  cursor: pointer;
-  border-radius: 50%;
-  border: 0.4px solid var(--white);
-  padding: 10px;
-  font-weight: 100;
-  height: 20px;
-  width: 20px;
-  transition: color 0.3s ease, transform 0.2s ease;
-}
-
-.HomeIntro-icon:hover {
-  transform: translateX(1px);
-  color: var(--primary-color);
+  color: var(--primary1-color);
 }
 
 .HomeIntro-iconRedirect {
@@ -104,50 +138,76 @@
   margin-left: 10px;
 }
 
-.HomeIntro-video {
-  position: relative;
-  width: 100%;
-  height: auto;
-  filter: brightness(40%);
-  z-index: -5;
+/* Side Navigation */
+.HomeIntro-side-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: hsl(103, 93%, 16%);
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  z-index: 20;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.09);
+}
+.HomeIntro-side-nav-left { left: 32px; }
+.HomeIntro-side-nav-right { right: 32px; }
+.HomeIntro-side-nav:hover { background: var(--primary1-color); color: #4328b9; }
+
+.HomeIntro-content {
+  position: absolute;
+  top: 400px;
+  left: 30px;
+  color: var(--white);
+  z-index: 2;
+}
+
+/* Responsive styles */
+@media (max-width: 1000px) {
+  .HomeIntro-info-cards-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    padding-bottom: 24px;
+    margin-top: -80px;
+  }
+  .HomeIntro-info-card {
+    max-width: 98vw;
+    width: 98vw;
+  }
+  .HomeIntro-info-icon {
+    font-size: 32px;
+    min-width: 32px;
+  }
 }
 
 @media (max-width: 768px) {
   .HomeIntro-card {
     height: 700px;
   }
-
   .HomeIntro-content {
     top: 250px;
     left: 15px;
   }
-
   .HomeIntro-heading {
     font-size: 35px;
     margin-right: 10px;
   }
-
   .HomeIntro-paragraph {
     font-size: 14px;
     margin-right: 10px;
   }
+}
 
-  .HomeIntro-link {
-    font-size: 16px;
-  }
-
-  .HomeIntro-video {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-  }
-
-  .HomeIntro-navigation {
-    gap: 3rem;
-    margin-bottom: 20px;
-  }
-
-  .HomeIntro-icon {
-    font-size: 16px;
-  }
+@media (max-width: 500px) {
+  .HomeIntro-heading { font-size: 24px; }
 }
