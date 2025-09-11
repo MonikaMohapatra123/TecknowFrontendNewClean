@@ -2,30 +2,15 @@ import React, { useState, useEffect, useCallback } from 'react';
 import './HomeIntroduction.css';
 import { getStoredData } from "../../JsonFiles/fetchData";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight, faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight, faAngleLeft, faAngleRight, faCalendarCheck, faLightbulb, faHardHat } from '@fortawesome/free-solid-svg-icons';
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Link as RouterLink } from 'react-router-dom';
 
-// ✅ Memoized Link wrapper
 const Link = React.memo(({ to, children, ...rest }) => {
-  const handleClick = () => {
-    window.scrollTo(0, 0);
-  };
-  return (
-    <RouterLink to={to} onClick={handleClick} {...rest}>
-      {children}
-    </RouterLink>
-  );
+  const handleClick = () => window.scrollTo(0, 0);
+  return <RouterLink to={to} onClick={handleClick} {...rest}>{children}</RouterLink>;
 });
-
-// ✅ Memoized Navigation Icons
-const Navigation = React.memo(({ onPrev, onNext }) => (
-  <div className="HomeIntro-navigation">
-    <FontAwesomeIcon icon={faAngleLeft} className="HomeIntro-icon" onClick={onPrev} />
-    <FontAwesomeIcon icon={faAngleRight} className="HomeIntro-icon" onClick={onNext} />
-  </div>
-));
 
 function HomeIntroduction() {
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
@@ -33,7 +18,6 @@ function HomeIntroduction() {
   const animationControls = useAnimation();
   const [ref, inView] = useInView();
 
-  // ✅ Fetch data
   useEffect(() => {
     const storedData = getStoredData();
     if (storedData && storedData[0]?.HomeIntro) {
@@ -43,7 +27,6 @@ function HomeIntroduction() {
     }
   }, []);
 
-  // ✅ Preload images for smoother transitions
   useEffect(() => {
     homeIntroData.forEach(item => {
       const img = new Image();
@@ -51,7 +34,6 @@ function HomeIntroduction() {
     });
   }, [homeIntroData]);
 
-  // ✅ Next/Prev card
   const nextCard = useCallback((increment) => {
     setCurrentCardIndex(prevIndex => {
       const totalCards = homeIntroData.length;
@@ -59,7 +41,6 @@ function HomeIntroduction() {
     });
   }, [homeIntroData.length]);
 
-  // ✅ Animate when in view
   useEffect(() => {
     if (inView) {
       animationControls.start({
@@ -70,7 +51,6 @@ function HomeIntroduction() {
     }
   }, [animationControls, inView]);
 
-  // ✅ Auto-change every 10s
   useEffect(() => {
     const timer = setInterval(() => {
       nextCard(1);
@@ -79,7 +59,6 @@ function HomeIntroduction() {
   }, [nextCard]);
 
   const card = homeIntroData[currentCardIndex];
-
   if (!card) return <div>Loading...</div>;
 
   return (
@@ -91,23 +70,61 @@ function HomeIntroduction() {
         animate={animationControls}
       >
         <div
-          className={`HomeIntro-card loaded`} // ✅ "loaded" avoids flicker
+          className={`HomeIntro-card loaded`}
           style={{ backgroundImage: `url(${card.HomeIntroImage})` }}
         >
+          {/* Side navigation buttons */}
+          <button className="HomeIntro-side-nav HomeIntro-side-nav-left" onClick={() => nextCard(-1)} aria-label="Previous">
+            <FontAwesomeIcon icon={faAngleLeft} />
+          </button>
           <div className="HomeIntro-content">
             <h2 className="HomeIntro-heading">
-              {card.HomeIntroHeading}
-              <span className="underscore">_</span>
+              Energy &<br />
+              Infrastructure<br />
+              Solutions
             </h2>
             <p className="HomeIntro-paragraph">{card.HomeIntroPara}</p>
             <Link to={card.HomeIntroLink} className="HomeIntro-link">
               {card.HomeIntroRedirect}
               <FontAwesomeIcon icon={faArrowRight} className="HomeIntro-iconRedirect" />
             </Link>
-            <Navigation onPrev={() => nextCard(-1)} onNext={() => nextCard(1)} />
           </div>
+          <button className="HomeIntro-side-nav HomeIntro-side-nav-right" onClick={() => nextCard(1)} aria-label="Next">
+            <FontAwesomeIcon icon={faAngleRight} />
+          </button>
         </div>
       </motion.div>
+
+      {/* Info cards section below hero */}
+      <div className="HomeIntro-info-cards-section">
+        <div className="HomeIntro-info-card">
+          <FontAwesomeIcon icon={faCalendarCheck} className="HomeIntro-info-icon" />
+          <div>
+            <div className="HomeIntro-info-title">On Time, Every Time</div>
+            <div className="HomeIntro-info-text">
+              Timely project delivery is our promise.
+            </div>
+          </div>
+        </div>
+        <div className="HomeIntro-info-card">
+          <FontAwesomeIcon icon={faLightbulb} className="HomeIntro-info-icon" />
+          <div>
+            <div className="HomeIntro-info-title">Smart Solutions</div>
+            <div className="HomeIntro-info-text">
+              We understand the value of every dollar.
+            </div>
+          </div>
+        </div>
+        <div className="HomeIntro-info-card">
+          <FontAwesomeIcon icon={faHardHat} className="HomeIntro-info-icon" />
+          <div>
+            <div className="HomeIntro-info-title">Safety Pioneers</div>
+            <div className="HomeIntro-info-text">
+              Safety is more than just a protocol; it's a promise.
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
