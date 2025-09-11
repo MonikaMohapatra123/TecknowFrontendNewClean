@@ -1,12 +1,13 @@
 import React from 'react';
 import './LoadingIcon.css'; // Import CSS for styling the loading icon
+import logo from "../../Assets/logobg.jpeg";
 
 const LoadingIcon = () => {
   return (
     <div className="loading-container">
       <div className="circle-spinner">
         <img
-          src="/PriyaLogo.webp"
+          src={logo}
           alt="Company Logo"
           className="logo"
           width="40"
