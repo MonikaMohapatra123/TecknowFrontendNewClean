@@ -129,15 +129,22 @@ const Footer = () => {
                   {totalData.CompanyName}
                 </a>
               </h2>
-              <div>
+              {/* <div>
+                <p>Email: <a href={`mailto:${totalData.Email}`}>{totalData.Email}</a></p>
+                <p>Head Office: <a href={totalData.Location1} target="_blank" rel="noopener noreferrer">{totalData.Address1}</a></p>
+                <p><a href={totalData.Location2} target="_blank" rel="noopener noreferrer">{totalData.Address2}</a></p>
+                <p><a href={totalData.Location3} target="_blank" rel="noopener noreferrer">{totalData.Address3}</a></p>
+              </div> */}
+            </div>
+          </div>
+         
+        </div>
+         <div>
                 <p>Email: <a href={`mailto:${totalData.Email}`}>{totalData.Email}</a></p>
                 <p>Head Office: <a href={totalData.Location1} target="_blank" rel="noopener noreferrer">{totalData.Address1}</a></p>
                 <p><a href={totalData.Location2} target="_blank" rel="noopener noreferrer">{totalData.Address2}</a></p>
                 <p><a href={totalData.Location3} target="_blank" rel="noopener noreferrer">{totalData.Address3}</a></p>
               </div>
-            </div>
-          </div>
-        </div>
 
         {/* Divider */}
         <hr className="footer-divider" />
