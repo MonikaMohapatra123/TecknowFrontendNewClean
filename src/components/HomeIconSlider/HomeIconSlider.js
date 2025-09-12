@@ -1,8 +1,5 @@
-
-
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import "./HomeIconSlider.css";
-
 import LogoSlider1 from "../../Assets/LogoSlider1.svg";
 import LogoSlider2 from "../../Assets/LogoSlider2.svg";
 import LogoSlider3 from "../../Assets/LogoSlider3.svg";
@@ -44,15 +41,79 @@ const testimonials = [
 ];
 
 const HomeIconSlider = () => {
-  const doubledLogos = logos.concat(logos);         // for smooth logo loop
-  const doubledTestimonials = testimonials.concat(testimonials); // smooth testimonial loop
+  const doubledLogos = logos.concat(logos);
+  const doubledTestimonials = testimonials.concat(testimonials);
+
+  const logoRef = useRef(null);
+  const testimonialRef = useRef(null);
+
+  // Drag-to-scroll function
+  const enableDragScroll = (ref) => {
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    const ele = ref.current;
+
+    ele.addEventListener("mousedown", (e) => {
+      isDown = true;
+      startX = e.pageX - ele.offsetLeft;
+      scrollLeft = ele.scrollLeft;
+      ele.classList.add("active-drag", "no-animation");
+    });
+
+    ele.addEventListener("mouseleave", () => {
+      isDown = false;
+      ele.classList.remove("active-drag", "no-animation");
+    });
+
+    ele.addEventListener("mouseup", () => {
+      isDown = false;
+      ele.classList.remove("active-drag", "no-animation");
+    });
+
+    ele.addEventListener("mousemove", (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - ele.offsetLeft;
+      const walk = (x - startX) * 1.2;
+      ele.scrollLeft = scrollLeft - walk;
+    });
+  };
+
+  // Auto-slide effect
+  const enableAutoSlide = (ref, speed) => {
+    const ele = ref.current;
+    let scrollAmount = 0;
+    setInterval(() => {
+      if (!ele.classList.contains("no-animation")) {
+        ele.scrollLeft += 1; // auto scroll speed
+        scrollAmount += 1;
+        if (scrollAmount >= ele.scrollWidth / 2) {
+          ele.scrollLeft = 0; // reset for infinite loop
+          scrollAmount = 0;
+        }
+      }
+    }, speed);
+  };
+
+  useEffect(() => {
+    if (logoRef.current) {
+      enableDragScroll(logoRef);
+      enableAutoSlide(logoRef, 20); // 20ms for smooth scroll
+    }
+    if (testimonialRef.current) {
+      enableDragScroll(testimonialRef);
+      enableAutoSlide(testimonialRef, 30); // slower for testimonials
+    }
+  }, []);
 
   return (
     <div className="slider-section">
       <h2 className="slider-title">Satisfied Customers</h2>
 
       {/* Logo Slider */}
-      <div className="slider-container">
+      <div className="slider-container" ref={logoRef}>
         <div className="slider-grid">
           {doubledLogos.map((logo, i) => (
             <div key={i} className="logo-box">
@@ -63,7 +124,7 @@ const HomeIconSlider = () => {
       </div>
 
       {/* Testimonial Slider */}
-      <div className="testimonial-slider-container">
+      <div className="testimonial-slider-container" ref={testimonialRef}>
         <div className="testimonial-slider">
           {doubledTestimonials.map((item, i) => (
             <div key={i} className="testimonial-card">
