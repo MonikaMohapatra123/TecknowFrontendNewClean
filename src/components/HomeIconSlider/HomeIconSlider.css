@@ -19,8 +19,15 @@
 
 /* Logo Slider */
 .slider-container {
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
   position: relative;
+  scroll-behavior: smooth;
+  cursor: grab;
+}
+
+.slider-container.active-drag {
+  cursor: grabbing;
 }
 
 .slider-grid {
@@ -77,9 +84,16 @@
 
 /* Testimonial Slider */
 .testimonial-slider-container {
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
   margin-top: 48px;
   position: relative;
+  scroll-behavior: smooth;
+  cursor: grab;
+}
+
+.testimonial-slider-container.active-drag {
+  cursor: grabbing;
 }
 
 .testimonial-slider {
@@ -94,7 +108,7 @@
   border-radius: 8px;
   padding: 28px 36px 26px 32px;
   box-shadow: 0 3px 12px rgba(220, 180, 50, 0.08);
-  flex: 0 0 calc(50% - 20px); /* 2 cards visible, subtract half of gap */
+  flex: 0 0 calc(50% - 20px); /* 2 cards visible */
   min-height: 150px;
   font-size: 17px;
   color: #222;
@@ -111,15 +125,9 @@
   to   { transform: translateX(-50%); }
 }
 
-@media (max-width: 900px) {
-  .testimonial-slider {
-    gap: 24px;
-  }
-  .testimonial-card {
-    flex: 0 0 100%; /* 1 card on small screens */
-    padding: 18px 14px 18px 15px;
-    font-size: 15px;
-  }
+/* Pause animations when dragging */
+.no-animation {
+  animation: none !important;
 }
 
 /* Responsive */
@@ -128,6 +136,7 @@
     gap: 24px;
   }
   .testimonial-card {
+    flex: 0 0 100%; /* 1 card visible on mobile */
     min-width: 220px;
     padding: 18px 14px 18px 15px;
     font-size: 15px;
